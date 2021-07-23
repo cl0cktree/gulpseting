@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- [MYS_AS_11_02_02_P1] 작성자: 누리어 시스템 김은경 -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My House 상세 | 자산 | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- app-header (for MyMoney) //-->
+        <!-- app-header [s] -->
+        <!-- data-type 
+    타이틀이 없을 경우 빈값(<strong class="page-tit"></strong>) - 마크업은 반드시 존재해야함
+    '' : 뒤로가기 + 타이틀 + 전체메뉴
+    'close': 타이틀 + 닫기버튼만
+    'title' : 타이틀만
+    'back' : 타이틀 + back버튼만
+    'notice' : 알림 + 타이틀 + 전체메뉴    
+-->
+        <header class="app-header" data-type="close">
+            <a href="javascript:;" class="btn-notice-box" role="button"><i class="icon-bell2_24">알림함으로 이동</i></a>
+            <a href="javascript:history.back();" class="btn-history-back" role="button"><i class="icon-back">뒤로가기</i></a>
+            <strong class="page-tit">My House 상세</strong>
+            <button type="button" class="btn-allmenu"><i class="icon-menu">전체메뉴</i></button>
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <div class="app-menu">
+            <!-- 수정 : 2021.06.24  // -->
+            <div class="all-menu-top">
+                <div class="util-menu">
+                    <a href="javascript:;" class="" role="button"><i class="icon-setting_24">설정</i></a>
+                    <a href="javascript:;" class="all-menu-notice new" role="button"><i class="icon-bell_24">알림</i></a><!-- 새로운 알림이 있을 때 .new -->
+                    <button type="button" class="btn-close"><span>닫기</span></button>
+                </div>
+                <div class="user-name"><a href="javascript:;"><strong>김국민</strong>님<i class="icon-move"></i></a></div>
+            </div>
+            <ul class="major-menu">
+                <li><a href="javascript:;"><span><i class="icon-mn_asset"></i></span><strong>자산등록</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_report"></i></span><strong>소비리포트</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_notice"></i></span><strong>공지사항</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_mydata"></i></span><strong>선물함</strong></a></li>
+            </ul>
+            <!--  // 수정 : 2021.06.24 -->
+            <div class="all-menu-list-wrap">
+                <div class="manage-mydata">
+                    <strong class="tit">마이데이터 관리</strong>
+                    <a href="javascript:;"><span>70</span><i class="icon-move"></i></a>
+                </div>
+                <!-- 수정 : 2021.06.24 메뉴 순서 변경 // -->
+                <ul class="all-menu-list">
+                    <li class="is-active">
+                        <a href="javascript:;">자산</a>
+                        <ul>
+                            <li><a href="javascript:;">자산통합조회</a></li>
+                            <li><a href="javascript:;">입출금&middot;페이</a></li>
+                            <li><a href="javascript:;">예적금</a></li>
+                            <li><a href="javascript:;">투자</a></li>
+                            <li><a href="javascript:;">보험</a></li>
+                            <li><a href="javascript:;">대출&middot;부채</a></li>
+                            <li><a href="javascript:;">부동산</a></li>
+                            <li><a href="javascript:;">자동차</a></li>
+                            <li><a href="javascript:;">My 금고</a></li>
+                            <li><a href="javascript:;">외화</a></li>
+                            <li><a href="javascript:;">적립포인트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지출</a>
+                        <ul>
+                            <li><a href="javascript:;">가계부</a></li>
+                            <li><a href="javascript:;">정기지출</a></li>
+                            <li><a href="javascript:;">카드관리</a></li>
+                            <li><a href="javascript:;">소비리포트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">목표 챌린지</a>
+                        <ul>
+                            <li><a href="javascript:;">아낀만큼</a></li>
+                            <li><a href="javascript:;">쓰는만큼</a></li>
+                            <li><a href="javascript:;">남들만큼</a></li>
+                            <li><a href="javascript:;">저금통</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">제휴/특화</a>
+                        <ul>
+                            <li><a href="javascript:;">신용</a></li>
+                            <li><a href="javascript:;">My Fun Data</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">슬그Money</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">D플랜</a>
+                        <ul>
+                            <li><a href="javascript:;">월수령액</a></li>
+                            <li><a href="javascript:;">라이프이벤트</a></li>
+                            <li><a href="javascript:;">나의기록</a></li>
+                            <li><a href="javascript:;">D플랜 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객센터</a>
+                        <ul>
+                            <li><a href="javascript:;">FAQ</a></li>
+                            <li><a href="javascript:;">전화상담</a></li>
+                            <li><a href="javascript:;">약관 및 정책</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">마이페이지</a>
+                        <ul>
+                            <li><a href="javascript:;">마이데이터 관리</a></li>
+                            <li><a href="javascript:;">내정보</a></li>
+                            <li><a href="javascript:;">마이데이터 선물함</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2021.06.24 메뉴 순서 변경 -->
+            </div>
+        </div>
+
+        <!-- // app-header (for MyMoney) -->
+
+        <!-- app-container //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content my-asset house-view my">
+
+
+                <!-- 주소입력 // -->
+                <section class="kb-sec">
+                    <div class="top-area">
+                        <p class="address">레미안퍼스티지 101동 405호 <br>(47F평/156m )</p>
+                        <p class="nick-name">별명이 있으면 나옴</p>
+                    </div>
+                </section>
+                <section class="kb-sec full house-data-list">
+                    <dl class="description-list type2">
+                        <dt>현재시세</dt>
+                        <dd class="amount"><span class="num">12</span>억원</dd>
+                        <dt>매입가</dt>
+                        <dd class="amount"><span class="num">9</span>억 <span class="num">1,000</span>만원</dd>
+                        <dt>매입일</dt>
+                        <dd class="date">2020.01.20</dd>
+                        <dt>시세차익</dt>
+                        <dd class="amount plus"> <em><span class="num">2,000</span>만원 (<span class="num">44.5%</span>)</em></dd><!-- 2021-06-11 공백 수정 -->
+                        <dt>지난달 대비</dt><!-- 2021-07-02 수정 -->
+                        <dd class="amount minus"> <em><span class="num">8,500</span>만원 (<span class="num">44.5%</span>)</em></dd><!-- 2021-06-11 공백 수정 -->
+                        <dt>세입자 보증금</dt><!-- 2021-07-02 수정 -->
+                        <dd class="amount"><span class="num">2</span>억 <span class="num">1,000</span>만원</dd>
+                        <dt>세입자 월세</dt><!-- 2021-07-02 수정 -->
+                        <dd class="amount">
+                            <section class="num">50만원</section>
+                        </dd>
+                    </dl>
+                </section>
+                <section class="kb-sec kb-conditions">
+                    <h4 class="h4">KB 시세</h4>
+                    <ul class="btn-segmented">
+                        <li><button class="is-selected"><span>전체</span></button></li>
+                        <li><button><span>5년</span></button></li>
+                        <li><button><span>3년</span></button></li>
+                    </ul>
+                    <!-- [chart area] //-->
+                    <!--
+				[차트 디자인 정보]
+				* 그래프(line + scatter) 색상(컬러별)
+				- 노란색 :  #ffd237;
+				- 오렌지색 :  #ff9901;
+				- 노란색 점 : #ffd237 투명도 40%
+				- 오렌지색 점 : #ff9901 투명도 40%
+				- 회색 : #edf0f4
+
+				- 차트 텍스트 컬러/크기 : #26282c/14px
+				- X,Y축 텍스트 컬러/크기 : #8c949e/14px
+				- data labels 텍스트 컬러/크기 : #26282c/14px
+				- 범주 타이틀 : #26282c/14px bold
+				
+			-->
+                    <div class="highcharts_column" id="">
+                        <img class="temp" src="../../static/images/_temp/chart_as1102.png" alt="차트 예시 이미지">
+                    </div>
+                    <!--// [chart area] -->
+                    <!-- 2021-06-11 수정 // -->
+                    <div class="conditions-con">
+                        <dl>
+                            <dt>매매</dt>
+                            <dd>
+                                <span class="tit kb">KB시세</span>
+                                <button type="button" class="btn-line_table">범위보기</button>
+                            </dd>
+                            <dd>
+                                <span class="tit selling">실거래가</span>
+                            </dd>
+                            <dd>
+                                <span class="tit publish">공시가격</span>
+                            </dd>
+                            <dt>전세</dt>
+                            <dd>
+                                <span class="tit kb lent">KB시세</span><!-- 2021-06-18 수정 -->
+                                <button type="button" class="btn-line_table disabled">범위보기</button>
+                            </dd>
+                            <dd>
+                                <span class="tit selling lent">실거래가</span><!-- 2021-06-18 수정 -->
+                            </dd>
+                        </dl>
+
+                    </div>
+                    <!-- // 2021-06-11 수정 -->
+                </section>
+                <section class="kb-sec my-house-loan">
+                    <h4 class="h4">My House 대출</h4>
+                    <dl class="description-list">
+                        <dt>상품명(3.16%)</dt>
+                        <dd class="amount"><span class="num">284,225,000</span>원</dd>
+                        <dt>상품명(3.16%)</dt>
+                        <dd class="amount"><span class="num">284,225,000</span>원</dd>
+                    </dl>
+                    <div class="percentage-graph type1">
+                        <div class="graph-area">
+                            <span style="width:50%"></span><!-- style로 그래프 넓이값 제어 -->
+                        </div>
+                        <div class="graph-txt">
+                            <p class="start-txt">대출 잔액 <span class="num">45.5%</span></p><!-- 시작부분 텍스트 -->
+                            <p class="current-txt" style="left:50%;"></p><!-- 현재 텍스트 (style로 텍스트 위치값 제어) -->
+                            <p class="end-txt">KB시세 평균가</p><!-- 마지막부분 텍스트 -->
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn-line" data-action="goKbLoanPage"><span>담보대출 상품보기</span></button><!-- 2021-06-22 수정 -->
+                    </div>
+                </section>
+                <section class="kb-sec other-conditions">
+                    <h4 class="h4">주변 시세</h4>
+                    <ul class="btn-segmented">
+                        <li>
+                            <button class="is-selected"><span>서초구</span></button>
+                            <div class="average-box">
+                                <span>서초구 평당 평균 <em><span class="num">140,665,210</span>원</em> </span>
+                            </div>
+                        </li>
+                        <li>
+                            <button><span>방배동</span></button>
+                            <div class="average-box">
+                                <span>방배동 평당 평균 <em><span class="num">140,665,210</span>원</em> </span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="graph-area">
+                        <h5 class="h5">Top 10단지</h5>
+                        <p class="unit-type">단위 : 만원</p>
+                        <!-- 2021-06-18 수정 // -->
+                        <ul class="percent-chart-list">
+                            <li>
+                                <div class="legend-txt"><span>신반포(한신2차)</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:100%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">8,671</span></div>
+                            </li>
+                            <li>
+                                <div class="legend-txt"><span>신반포자이</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:70%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,776</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>반포래미안아이파크</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:70%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,422</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>신반포(한신4차)</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:70%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,421</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>진흥</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:86%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">8,671</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>서초푸르지오써밋</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:73%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,776</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>래미안서초에스티지</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:70%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,422</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>신동아(1차)</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:70%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,422</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>삼익</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:70%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,422</span></div>
+                            </li>
+                            <li class="show-later">
+                                <div class="legend-txt"><span>래미안서초스위트</span></div>
+                                <div class="percentage-graph type3">
+                                    <div class="graph-area">
+                                        <span style="width:65%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                    </div>
+                                </div>
+                                <div class="chart-amount"><span class="num">7,421</span></div>
+                            </li>
+                        </ul>
+                        <!-- 2021-06-18 수정 // -->
+                        <div class="info-box">
+                            <i class="icon-bang_20_gray"></i> 전용면적 <span class="num">25.71</span>평 초과~<span class="num">30.85</span>평 이하가 있는
+                            단지 중 평당 매매 KB시세 상위 <span class="num">10</span>개 단지입니다.
+                        </div>
+                    </div>
+                    <button class="btn-view-more" data-action="moreViewChart"><span><i class="icon-plus_20"></i> <b>더보기</b></span></button>
+                </section>
+                <section class="kb-sec other-expenses">
+                    <h4 class="h4">같은 평형의 관리비</h4>
+                    <!-- 2021-06-18 수정 // -->
+                    <ul class="percent-chart-list">
+                        <li>
+                            <div class="legend-txt"><span>연평균</span></div>
+                            <div class="percentage-graph type3 orange">
+                                <div class="graph-area">
+                                    <span style="width:67%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                </div>
+                            </div>
+                            <div class="chart-amount"><span class="num">150,219</span>원</div>
+                        </li>
+                        <li>
+                            <div class="legend-txt"><span>여름(6~8월)</span></div>
+                            <div class="percentage-graph type3">
+                                <div class="graph-area">
+                                    <span style="width:87%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                </div>
+                            </div>
+                            <div class="chart-amount"><span class="num">185,219</span>원</div>
+                        </li>
+                        <li>
+                            <div class="legend-txt"><span>겨울(12~2월)</span></div>
+                            <div class="percentage-graph type3">
+                                <div class="graph-area">
+                                    <span style="width:85%"> </span><!-- style로 그래프 넓이값 제어 -->
+                                </div>
+                            </div>
+                            <div class="chart-amount"><span class="num">181,000</span>원</div>
+                        </li>
+                    </ul>
+                    <!-- // 2021-06-18 수정 -->
+                </section>
+
+
+
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+    <script>
+        //2021-06-18 수정
+        $('button[data-action=moreViewChart]').on('click', function() {
+            $(this).closest('.other-conditions').find('.percent-chart-list .show-later').css('display', 'table');
+            $(this).closest('.other-conditions').find('.info-box').show();
+            $(this).hide();
+        });
+        //2021-06-18 수정
+        $('.my-asset .conditions-con .btn-line_table').click(function() {
+            var chk = $(this).hasClass('disabled');
+            if (chk) {
+                $(this).removeClass('disabled');
+            } else {
+                $(this).addClass('disabled');
+            }
+        })
+
+        //2021-06-22
+        $('button[data-action=goKbLoanPage]').on('click', function() {
+            modalPopup({
+                title: "",
+                message: "KB대출상품 화면으로 <br>이동하시겠습니까?",
+                type: "confirm",
+                textOkButton: "확인",
+                textCancelButton: "취소",
+                onOk: function() {
+
+                },
+                onCancel: function() {
+
+                }
+            });
+        });
+        //2021-06-22
+    </script>
+</body>
+
+</html>

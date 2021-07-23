@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- [MYS_GO_03_00_00] 목표 > 아낀만큼_진행중_(tab) (작성자: 누리어 시스템 김삼희) -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>아낀만큼 진행 상세 내역 | 아낀만큼 | 목표 | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- app-header (for MyMoney) //-->
+        <!-- 2021-07-13 수정 // -->
+        <!-- app-header [s] -->
+        <!-- data-type 
+    타이틀이 없을 경우 빈값(<strong class="page-tit"></strong>) - 마크업은 반드시 존재해야함
+    '' : 뒤로가기 + 타이틀 + 전체메뉴
+    'close': 타이틀 + 닫기버튼만
+    'title' : 타이틀만
+    'back' : 타이틀 + back버튼만
+    'notice' : 알림 + 타이틀 + 전체메뉴    
+-->
+        <header class="app-header" data-type="">
+            <a href="javascript:;" class="btn-notice-box" role="button"><i class="icon-bell2_24">알림함으로 이동</i></a>
+            <a href="javascript:history.back();" class="btn-history-back" role="button"><i class="icon-back">뒤로가기</i></a>
+            <strong class="page-tit">상세 내역</strong>
+            <button type="button" class="btn-allmenu"><i class="icon-menu">전체메뉴</i></button>
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <div class="app-menu">
+            <!-- 수정 : 2021.06.24  // -->
+            <div class="all-menu-top">
+                <div class="util-menu">
+                    <a href="javascript:;" class="" role="button"><i class="icon-setting_24">설정</i></a>
+                    <a href="javascript:;" class="all-menu-notice new" role="button"><i class="icon-bell_24">알림</i></a><!-- 새로운 알림이 있을 때 .new -->
+                    <button type="button" class="btn-close"><span>닫기</span></button>
+                </div>
+                <div class="user-name"><a href="javascript:;"><strong>김국민</strong>님<i class="icon-move"></i></a></div>
+            </div>
+            <ul class="major-menu">
+                <li><a href="javascript:;"><span><i class="icon-mn_asset"></i></span><strong>자산등록</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_report"></i></span><strong>소비리포트</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_notice"></i></span><strong>공지사항</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_mydata"></i></span><strong>선물함</strong></a></li>
+            </ul>
+            <!--  // 수정 : 2021.06.24 -->
+            <div class="all-menu-list-wrap">
+                <div class="manage-mydata">
+                    <strong class="tit">마이데이터 관리</strong>
+                    <a href="javascript:;"><span>70</span><i class="icon-move"></i></a>
+                </div>
+                <!-- 수정 : 2021.06.24 메뉴 순서 변경 // -->
+                <ul class="all-menu-list">
+                    <li class="is-active">
+                        <a href="javascript:;">자산</a>
+                        <ul>
+                            <li><a href="javascript:;">자산통합조회</a></li>
+                            <li><a href="javascript:;">입출금&middot;페이</a></li>
+                            <li><a href="javascript:;">예적금</a></li>
+                            <li><a href="javascript:;">투자</a></li>
+                            <li><a href="javascript:;">보험</a></li>
+                            <li><a href="javascript:;">대출&middot;부채</a></li>
+                            <li><a href="javascript:;">부동산</a></li>
+                            <li><a href="javascript:;">자동차</a></li>
+                            <li><a href="javascript:;">My 금고</a></li>
+                            <li><a href="javascript:;">외화</a></li>
+                            <li><a href="javascript:;">적립포인트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지출</a>
+                        <ul>
+                            <li><a href="javascript:;">가계부</a></li>
+                            <li><a href="javascript:;">정기지출</a></li>
+                            <li><a href="javascript:;">카드관리</a></li>
+                            <li><a href="javascript:;">소비리포트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">목표 챌린지</a>
+                        <ul>
+                            <li><a href="javascript:;">아낀만큼</a></li>
+                            <li><a href="javascript:;">쓰는만큼</a></li>
+                            <li><a href="javascript:;">남들만큼</a></li>
+                            <li><a href="javascript:;">저금통</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">제휴/특화</a>
+                        <ul>
+                            <li><a href="javascript:;">신용</a></li>
+                            <li><a href="javascript:;">My Fun Data</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">슬그Money</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">D플랜</a>
+                        <ul>
+                            <li><a href="javascript:;">월수령액</a></li>
+                            <li><a href="javascript:;">라이프이벤트</a></li>
+                            <li><a href="javascript:;">나의기록</a></li>
+                            <li><a href="javascript:;">D플랜 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객센터</a>
+                        <ul>
+                            <li><a href="javascript:;">FAQ</a></li>
+                            <li><a href="javascript:;">전화상담</a></li>
+                            <li><a href="javascript:;">약관 및 정책</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">마이페이지</a>
+                        <ul>
+                            <li><a href="javascript:;">마이데이터 관리</a></li>
+                            <li><a href="javascript:;">내정보</a></li>
+                            <li><a href="javascript:;">마이데이터 선물함</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2021.06.24 메뉴 순서 변경 -->
+            </div>
+        </div>
+
+        <!-- // 2021-07-13 수정 -->
+        <!-- // app-header -->
+
+        <!-- app-container (for MyMoney) //-->
+        <div class="app-container">
+            <!-- app-content // -->
+            <main class="app-content goals-challenge">
+                <section class="kb-sec goals-detail-list">
+                    <div class="challenge-box content-swiper-wrap">
+                        <div class="swiper-container content-swiper t01 js-swiper" data-swiper-options="goalGraphSwiperOptions">
+                            <!-- 2021-07-15 수정 -->
+                            <!-- 2021-07-15 수정 // -->
+                            <script>
+                                var goalGraphSwiperOptions = {
+                                    "pagination": {
+                                        "el": ".swiper-pagination"
+                                    },
+                                    "spaceBetween": 16,
+                                    "slidesPerView": "auto",
+                                    "autoHeight": "true"
+                                };
+                            </script>
+                            <!-- // 2021-07-15 수정 -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide content-box shadow">
+                                    <div class="challenge-tit">
+                                        <strong class="h3">
+                                            커피 줄이기
+                                            <span>카페인 샤워는 이제 그만!</span>
+                                        </strong>
+                                        <span class="num">D-5</span>
+                                    </div>
+                                    <div class="challenge-info">
+                                        <ul class="term-list">
+                                            <li><span>목표기간</span> <em class="num">2021.04.01~2021.04.06</em></li> <!-- 2021-06-29 수정 -->
+                                            <li><span>6개월 평균 소비금액</span> <em class="num">150,000</em>원</li> <!-- 2021-06-30 수정 -->
+                                            <li><span>목표금액</span> <em class="num">150,000</em>원 (1주일)</li> <!-- 2021-06-29 수정 -->
+                                        </ul>
+                                        <div class="txt-goal-stat">
+                                            <p>현재까지 <strong class="num">70,000</strong>원 사용했고,</p> <!-- 2021-06-30 수정 -->
+                                            <p>목표까지 <strong class="num">80,000</strong>원 남았어요.</p> <!-- 2021-06-30 수정 -->
+                                        </div>
+
+                                        <div class="character-graph goal" data-theme="pay">
+                                            <!--2021-07-13 수정-->
+                                            <div class="graph-area">
+                                                <span data-goal="50"><i><img src="../../static/images/_temp/@progress_coffee.png" alt="커피"></i></span>
+                                                <!--2021-07-13 수정-->
+                                                <div class="flag"><i class="icon-flag-goal"></i></div>
+                                            </div>
+                                            <div class="graph-txt">
+                                                <p class="start-txt">현재소비금액<br><strong><span class="num">100,000</span>원</strong></p> <!-- 2021-06-30 수정 -->
+                                                <p class="end-txt">목표금액<br><strong><span class="num">150,000</span>원</strong></p> <!-- 2021-06-30 수정 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide content-box shadow">
+                                    <div class="challenge-tit">
+                                        <strong class="h3">
+                                            커피 줄이기
+                                            <span>카페인 중독! 더는 위험해요!</span>
+                                        </strong>
+                                        <span class="num">D-5</span>
+                                    </div>
+                                    <div class="challenge-info">
+                                        <ul class="term-list">
+                                            <li><span>목표기간</span> <em class="num">2021.04.01~2021.04.06</em></li> <!-- 2021-06-29 수정 -->
+                                            <li><span>6개월 평균 소비금액</span> <em class="num">150,000</em>원</li> <!-- 2021-06-30 수정 -->
+                                            <li><span>목표금액</span> <em class="num">150,000</em>원 (1주일)</li> <!-- 2021-06-29 수정 -->
+                                        </ul>
+                                        <ul class="legend-dot">
+                                            <!-- <li>지난주</li> 2021-07-19 삭제 -->
+                                            <li class="current">현재</li>
+                                        </ul>
+                                        <!-- 2021-06-17 수정// -->
+                                        <div class="highcharts_column type-ratio no-mt" id="columnChart01"></div> <!-- 2021-06-30 수정 -->
+                                        <!-- //2021-06-17 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="kb-sec goals-pay-list">
+                    <dl class="accordian">
+                        <dt>
+                            <div>지출내역 확인하기</div>
+                            <button type="button"><i></i></button>
+                        </dt>
+                        <dd>
+                            <div class="credit-list-group">
+                                <dl class="credit-list t01">
+                                    <dt>
+                                        <span class="info"><em class="date num">2021.08.09 17:45</em></span>
+                                        <strong class="tit">카페</strong>
+                                    </dt>
+                                    <dd>
+                                        <span class="btn-switch label-front">
+                                            <strong class="amount"><span class="num">9,800</span>원</strong>
+                                        </span>
+                                    </dd>
+                                    <dt>
+                                        <span class="info"><em class="date num">2021.08.09 17:45</em></span>
+                                        <strong class="tit">카페</strong>
+                                    </dt>
+                                    <dd>
+                                        <span class="btn-switch label-front">
+                                            <strong class="amount"><span class="num">9,800</span>원</strong>
+                                        </span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="credit-list t01">
+                        <dt>
+                            <strong class="tit">합계</strong>
+                        </dt>
+                        <dd>
+                            <span class="btn-switch label-front">
+                                <strong class="amount"><span class="num">9,800</span>원</strong>
+                            </span>
+                        </dd>
+                    </dl>
+                </section>
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <!-- [MYS_AS_07_00_00_P1] 대상선택 팝업 (작성자: 누리어 시스템 김은경)// -->
+            <!-- 대상선택 팝업// -->
+            <div class="bottom-sheet full-size" data-layered-name="mys_as_07_00_00_p1">
+
+                <div class="bottom-sheet_header">
+                    <span class="tit">연령/금융자산 선택</span><!-- 2021-06-22 예적금, 보험 -->
+                    <!--<span class="tit">연령선택</span>-->
+                    <!-- 2021-06-22 입출금, 대출 -->
+                </div>
+                <div class="bottom-sheet_contents">
+                    <!-- 수정 : 2021-07-22  (연령대 구성 수정) // -->
+                    <!-- 항목이 2개일 경우 // -->
+                    <section class="kb-sec">
+                        <div class="select-lists">
+                            <dl>
+                                <dt>연령대</dt>
+                                <dd>
+                                    <ul class="select-list">
+                                        <li class="is-active"><button type="button"><strong class="tit">20세~24세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">25세~29세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">30세~34세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">35세~39세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">40세~44세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">45세~49세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">50세~54세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">55세~59세</strong></button></li>
+                                        <li><button type="button"><strong class="tit">60세 이상</strong></button></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>금융자산</dt>
+                                <dd>
+                                    <ul class="select-list">
+                                        <li><button type="button"><strong class="tit">1,000만원 미만</strong></button></li>
+                                        <li><button type="button"><strong class="tit">1,000만원~3,000만원</strong></button></li>
+                                        <li class="is-active"><button type="button"><strong class="tit">3,000만원~5,000만원</strong></button></li>
+                                        <li><button type="button"><strong class="tit">5,000만원~7,000만원</strong></button></li>
+                                        <li><button type="button"><strong class="tit">7,000만원~1억원</strong></button></li>
+                                        <li><button type="button"><strong class="tit">1억원~3억원</strong></button></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                    </section>
+                    <!-- // 항목이 2개일 경우  -->
+
+                    <!-- 항목이 1개일 경우 // -->
+                    <section class="kb-sec">
+                        <ul class="select-list align-c">
+                            <li class="is-active"><button type="button"><strong class="tit">20세~24세</strong></button></li>
+                            <li><button type="button"><strong class="tit">25세~29세</strong></button></li>
+                            <li><button type="button"><strong class="tit">30세~34세</strong></button></li>
+                            <li><button type="button"><strong class="tit">35세~39세</strong></button></li>
+                            <li><button type="button"><strong class="tit">40세~44세</strong></button></li>
+                            <li><button type="button"><strong class="tit">45세~49세</strong></button></li>
+                            <li><button type="button"><strong class="tit">50세~54세</strong></button></li>
+                            <li><button type="button"><strong class="tit">55세~59세</strong></button></li>
+                            <li><button type="button"><strong class="tit">60세 이상</strong></button></li>
+                        </ul>
+                    </section>
+                    <!-- //  항목이 1개일 경우  -->
+                    <!-- // 수정 : 2021-07-22  (연령대 구성 수정) -->
+                </div>
+                <!-- 항목이 1개일 경우 삭제 // -->
+                <div class="bottom-sheet_buttons">
+                    <button class="btn-solid_sticky" data-action="close"><span>확인</span></button>
+                </div>
+                <!-- // 항목이 1개일 경우 삭제 -->
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!--//대상선택 팝업 -->
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- <script src="../../static/common/lib/swiper.min.js?cbh=d7a45209a3d57257d11711a1b75d9c0a"></script> 2021-07-14 삭제-->
+
+    <!-- 2021-07-15 삭제 //
+    <script>
+        var $contentSwiper = $('.content-swiper-wrap');
+        if($contentSwiper.length > 0){
+            $contentSwiper.each(function(index){
+                var $contentSwiper = $(this).find('.swiper-container');
+                var index = index+1;
+                $contentSwiper.addClass('content-swiper' + index);
+                var swiper = new Swiper('.content-swiper' + index, {
+                    slidesPerView: 'auto',
+                    centeredSlides: 'true',
+                    spaceBetween: 16, /*2021-06-14 수정*/               
+                    autoHeight : 'true', /*2021-06-08 추가*/
+                    pagination: {
+                        el: $('.content-swiper' + index).find('.swiper-pagination'),
+                        type: 'bullets',
+                        clickable: 'true',
+                    },
+                    navigation: {
+                        nextEl: $('.content-swiper' + index).find('.swiper-button-next'),
+                        prevEl: $('.content-swiper' + index).find('.swiper-button-prev'),
+                    },
+                });
+            });
+        };
+    </script>    
+    // 2021-07-15 삭제 -->
+
+    <!-- 2021-06-17 추가// -->
+    <script src="../../static/common/lib/highcharts/highcharts.js?cbh=80122101e52d65a4c772aa6df225334d"></script>
+    <script src="../../static/common/lib/highcharts/rounded-corners.js?cbh=9f3683fa2a5fa77b6b6305330bd060df"></script>
+
+    <!-- Add Script -->
+    <script>
+        // highchart 공통 options
+        Highcharts.setOptions({
+            title: {
+                text: null
+            },
+            subTitle: {
+                text: null
+            },
+            credits: {
+                enabled: false
+            },
+            tooltip: {
+                enabled: false
+            },
+            label: {
+                fontFamily: 'KBFGText'
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            }
+        });
+
+
+        //chart 선언
+        var doubleColumnChart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'columnChart01', // chart 삽입 target ID
+                type: "column",
+                //height: (3 / 4 * 100) + '%', // 4:3 비율로 설정
+                marginLeft: 0, // 2021-06-25 수정
+                marginRight: 0, // 2021-06-25 수정
+                marginTop: 0 // 2021-06-25 수정
+            },
+            legend: {
+                enabled: false
+            },
+            // legend: { enabled: true, floating:true, layout:'horizontal', align:'left', x:-20, symbolPadding: 10, verticalAlign: 'top', itemDistance:30, itemStyle:{color:'#26282c', fontSize:'3.733vw', fontWeight:'normal', fontFamily: 'KBFGText'} },
+            xAxis: {
+                type: "category",
+                // max: 5, //2021-07-19 삭제
+                categories: ["7월12일", "7월13일", "7월14일", "7월15일"], //2021-07-19 수정
+                labels: {
+                    style: {
+                        color: "#aab0b8",
+                        fontSize: "3.733vw",
+                        fontFamily: 'KBFGText',
+                    }
+                }
+            },
+            yAxis: {
+                endOnTick: false, // 2021-06-25 수정
+                enabled: false, // 사용 안함
+                labels: {
+                    enabled: false
+                }, // 축 lebel 사용 안함
+                title: {
+                    enabled: false
+                }, // 축 title 사용 안함
+                tickWidth: 0, // 그리드 라인 너비
+                gridLineColor: null, // 그리드 라인 컬러
+                plotLines: [{
+                    color: "#c7ccd1",
+                    width: 1,
+                    value: 3,
+                    zIndex: 50,
+                    dashStyle: 'dash'
+                }, ],
+            },
+            plotOptions: {
+                series: {
+                    grouping: false,
+                    borderWidth: 0,
+                    pointWidth: 16, // 막대그래프 너비
+                    borderRadiusTopLeft: "50%", // radius 값
+                    borderRadiusTopRight: "50%" // radius 값
+                }
+            },
+            series: [
+                /* 2021-07-19 삭제 //
+                {
+                    id: "outMoney",
+                    name: "지난주", // 2021-07-08 수정
+                    color: "#c6cbd0",
+                    pointPlacement: -0.2,
+                    data: [3, 3, 3, 3]
+                },
+                // 2021-07-19 삭제 */
+                {
+                    id: "inMoney",
+                    name: "현재", // 2021-07-08 수정
+                    color: '#ffd338',
+                    data: [1, 2, 3, 4]
+                }
+            ],
+        });
+    </script>
+    <!-- //2021-06-17 추가 -->
+</body>
+
+</html>

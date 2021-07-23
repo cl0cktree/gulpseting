@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Last Depth | 1st Depth | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- app-header //-->
+        <!-- app-header [s] -->
+        <header class="app-header">
+            <a href="javascript:history.back();" class="btn-history-back" role="button"><i class="icon-back">뒤로가기</i></a>
+            <strong class="page-tit">이벤트 레이어 모음</strong>
+            <button type="button" class="btn-allmenu"><i class="icon-menu">전체메뉴</i></button>
+        </header>
+        <!-- app-header [e] -->
+        <div class="app-menu">
+            <!-- 수정 : 2021.06.24  // -->
+            <div class="all-menu-top">
+                <div class="util-menu">
+                    <a href="javascript:;" class="" role="button"><i class="icon-setting_24">설정</i></a>
+                    <a href="javascript:;" class="all-menu-notice new" role="button"><i class="icon-bell_24">알림</i></a><!-- 새로운 알림이 있을 때 .new -->
+                    <button type="button" class="btn-close"><span>닫기</span></button>
+                </div>
+                <div class="user-name"><a href="javascript:;"><strong>김국민</strong>님<i class="icon-move"></i></a></div>
+            </div>
+            <ul class="major-menu">
+                <li><a href="javascript:;"><span><i class="icon-mn_asset"></i></span><strong>자산등록</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_report"></i></span><strong>소비리포트</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_notice"></i></span><strong>공지사항</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_mydata"></i></span><strong>선물함</strong></a></li>
+            </ul>
+            <!--  // 수정 : 2021.06.24 -->
+            <div class="all-menu-list-wrap">
+                <div class="manage-mydata">
+                    <strong class="tit">마이데이터 관리</strong>
+                    <a href="javascript:;"><span>70</span><i class="icon-move"></i></a>
+                </div>
+                <!-- 수정 : 2021.06.24 메뉴 순서 변경 // -->
+                <ul class="all-menu-list">
+                    <li class="is-active">
+                        <a href="javascript:;">자산</a>
+                        <ul>
+                            <li><a href="javascript:;">자산통합조회</a></li>
+                            <li><a href="javascript:;">입출금&middot;페이</a></li>
+                            <li><a href="javascript:;">예적금</a></li>
+                            <li><a href="javascript:;">투자</a></li>
+                            <li><a href="javascript:;">보험</a></li>
+                            <li><a href="javascript:;">대출&middot;부채</a></li>
+                            <li><a href="javascript:;">부동산</a></li>
+                            <li><a href="javascript:;">자동차</a></li>
+                            <li><a href="javascript:;">My 금고</a></li>
+                            <li><a href="javascript:;">외화</a></li>
+                            <li><a href="javascript:;">적립포인트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지출</a>
+                        <ul>
+                            <li><a href="javascript:;">가계부</a></li>
+                            <li><a href="javascript:;">정기지출</a></li>
+                            <li><a href="javascript:;">카드관리</a></li>
+                            <li><a href="javascript:;">소비리포트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">목표 챌린지</a>
+                        <ul>
+                            <li><a href="javascript:;">아낀만큼</a></li>
+                            <li><a href="javascript:;">쓰는만큼</a></li>
+                            <li><a href="javascript:;">남들만큼</a></li>
+                            <li><a href="javascript:;">저금통</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">제휴/특화</a>
+                        <ul>
+                            <li><a href="javascript:;">신용</a></li>
+                            <li><a href="javascript:;">My Fun Data</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">슬그Money</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">D플랜</a>
+                        <ul>
+                            <li><a href="javascript:;">월수령액</a></li>
+                            <li><a href="javascript:;">라이프이벤트</a></li>
+                            <li><a href="javascript:;">나의기록</a></li>
+                            <li><a href="javascript:;">D플랜 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객센터</a>
+                        <ul>
+                            <li><a href="javascript:;">FAQ</a></li>
+                            <li><a href="javascript:;">전화상담</a></li>
+                            <li><a href="javascript:;">약관 및 정책</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">마이페이지</a>
+                        <ul>
+                            <li><a href="javascript:;">마이데이터 관리</a></li>
+                            <li><a href="javascript:;">내정보</a></li>
+                            <li><a href="javascript:;">마이데이터 선물함</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2021.06.24 메뉴 순서 변경 -->
+            </div>
+        </div>
+        <!-- // app-header -->
+
+        <!-- app-container //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content">
+                <section class="kb-sec">
+                    <button type="button" class="btn-line btn-event-roullete" data-roullete-size="4"><span>룰렛 이벤트 (4칸)</span></button>
+                    <button type="button" class="btn-line btn-event-roullete" data-roullete-size="5"><span>룰렛 이벤트 (5칸)</span></button>
+                    <button type="button" class="btn-line btn-event-roullete" data-roullete-size="6"><span>룰렛 이벤트 (6칸)</span></button>
+                    <button type="button" class="btn-line btn-event-random"><span>랜덤뽑기 이벤트</span></button>
+                    <button type="button" class="btn-line btn-event-scratch"><span>스크래치 이벤트</span></button>
+                    <button type="button" class="btn-line btn-event-scratch02"><span>경품 선택 후 스크래치 이벤트</span></button>
+                </section>
+
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <div class="popup promotion" data-layered-name="eventRoullete">
+                <div class="popup_header">
+                    <strong class="tit">이벤트</strong>
+                </div>
+                <div class="popup_contents">
+                    <section class="kb-sec event-area event-roullete">
+                        <strong class="event-tit">최초 계좌추가<br> 룰렛 이벤트</strong>
+                        <div class="roulette">
+                            <ul class="wheel" data-percentage="6"></ul>
+                            <button type="button" class="btn-run-wheel"><span>룰렛돌리기<strong>START</strong></span></button>
+                            <span class="roulette-top"></span>
+                            <div class="ev-character">
+                                <span class="roulette-character01"></span>
+                                <span class="roulette-character02"></span>
+                                <span class="roulette-character03"></span>
+                                <span class="roulette-character04"></span>
+                                <span class="roulette-character05"></span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="kb-sec">
+                        <dl class="event-desc">
+                            <dt>기간</dt>
+                            <dd>2021.10.04(월) ~ 2021.10.29(금)</dd>
+                            <dt>대상</dt>
+                            <dd>
+                                KB마이데이터 최초동의 고객 중 통합인증 및 전체동의 완료 고객
+                            </dd>
+                            <dt>참여방법</dt>
+                            <dd>
+                                - 미완료 고객<br>
+                                ① 상단 ‘동의하러 가기’ 버튼 클릭<br>
+                                ② 통합인증 및 전체동의 완료<br>
+                                ③ 즉석룰렛 스티커 클릭<br>
+                                ④ 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ⑤ 실시간 당첨 리워드 확인가능<br>
+                                <br>
+                                - 완료 고객<br>
+                                ① 마이데이터 선물함 메뉴의 실시간 이벤트에서<br>
+                                ‘룰렛이벤트 배너’ 클릭<br>
+                                ② 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ③ 실시간 당첨 리워드 확인가능
+                            </dd>
+                            <dt>당첨자 발표</dt>
+                            <dd>
+                                100% 경품 당첨 실시간 확인 가능
+                            </dd>
+                            <dt>경품</dt>
+                            <dd>
+                                신세계이마트 상품권 3만원 (1,000명)<br>
+                                스타벅스 부드러운 디저트 세트 1매 (5,000명)<br>
+                                스타벅스 아이스 아메리카노 Tall 1매 (10,000명)<br>
+                                포인트리 500P (420,000명)
+                            </dd>
+                        </dl>
+                        <dl class="event-caution">
+                            <dt>유의사항</dt>
+                            <dd>
+                                - 본 이벤트는 KB국민은행의 이벤트로 사정에 따라 변경 또는 중단될 수 있습니다.<br>
+                                - 참여고객 대상 지급되는 경품은 참여 즉시 지급되며 마이데이터 선물함 &gt; 선물에서 확인 가능합니다.<br>
+                                - 기타 자세한 이벤트 내용은 KB마이데이터 담당자 (02-2073-0000, 평일 9~18시 / 주말 및 공휴일 휴무)에게 문의바랍니다.<br>
+                                <br>
+                                본 광고물에 대한 유효기간 2021.10.31까지 준법감시인 심의필 제2021-0000호(2021.09.27)
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+
+            <script>
+                var promotionData = [{
+                        "title": '신세계이마트 상품권',
+                        "prizeAmount": '30,000',
+                        "prizeUnit": '원',
+                        "thumb": '../../static/images/event/img-voucher.png',
+                    },
+                    {
+                        "title": 'KB 포인트리',
+                        "prizeAmount": '500',
+                        "prizeUnit": 'P',
+                        "thumb": '../../static/images/event/img-pointre.png',
+                    },
+                    {
+                        "title": '스타벅스 디저트 세트',
+                        "prizeAmount": '1',
+                        "prizeUnit": '매',
+                        "thumb": '../../static/images/event/img-coffee.png',
+                    },
+                    {
+                        "title": 'KB 포인트리',
+                        "prizeAmount": '1,000',
+                        "prizeUnit": 'P',
+                        "thumb": '../../static/images/event/img-pointre.png',
+                    },
+                    {
+                        "title": 'KB 포인트리',
+                        "prizeAmount": '1,200',
+                        "prizeUnit": 'P',
+                        "thumb": '../../static/images/event/img-pointre.png',
+                    },
+                    {
+                        "title": 'KB 포인트리',
+                        "prizeAmount": '1,500',
+                        "prizeUnit": 'P',
+                        "thumb": '../../static/images/event/img-pointre.png',
+                    },
+                ];
+
+                var fnEventRoullete = function(size) {
+                    var $this = $('.promotion[data-layered-name=eventRoullete]');
+                    var $wheel = $this.find('.roulette .wheel');
+                    $wheel.attr('data-percentage', size);
+
+                    var eventName = $this.find('.event-tit').text();
+                    var chance = size;
+                    //var chance = $wheel.data('percentage');        
+
+                    var winningNum;
+                    var roullete = {
+                        init: function() {
+                            $wheel.empty();
+                            for (i = 0; i < chance; i++) {
+                                var prizeHTML = '<li><div class=\"content\">';
+                                prizeHTML += '<strong class=\"tit\">' + promotionData[i].title + '</strong>';
+                                prizeHTML += '<p><span class=\"num\" data-unit-after=\"' + promotionData[i].prizeUnit + '\">' + promotionData[i].prizeAmount + '</span></p>';
+                                prizeHTML += '</div></li>';
+                                $wheel.append(prizeHTML);
+                            }
+                            roullete.bind();
+                        },
+                        run: function(idx) {
+                            var baseDeg = 3600;
+                            var eachDeg = 360 / chance;
+                            var additionalDeg = Math.floor((Math.random() * (eachDeg / 2) - 5)); //5deg in safety
+                            var selectedIdx = idx;
+                            var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+
+                            //console.log('selectedIdx:' + selectedIdx, 'additionalDeg:' + additionalDeg, 'plusOrMinus:' + plusOrMinus);
+                            //$wheel.find('li').eq(selectedIdx).css({'border':'2px solid red'})
+
+                            var selectedDeg = baseDeg - (selectedIdx * eachDeg) + (additionalDeg * plusOrMinus);
+
+                            $wheel.addClass('is-animating').css({
+                                'transform': 'rotate(' + selectedDeg + 'deg)'
+                            });
+                            $wheel.one('transitionend', function() {
+                                $wheel.removeClass('is-animating').css({
+                                    'transform': 'rotate(' + (selectedDeg - baseDeg) + 'deg)'
+                                });
+
+                                //Callback
+                                //bottom sheet make                    
+                                roullete.result('bsNewEvent01'); //bsNewEvent01 (임의의 이름 중복되지 않게 사용)
+                            });
+                        },
+                        result: function(id, delay) {
+                            $('.bottom-sheet[data-layered-name="' + id + '"]').remove();
+                            var resultHTML = '<div class=\"bottom-sheet\" data-layered-name=\"' + id + '\">';
+                            resultHTML += '<div class=\"bottom-sheet_header\">';
+                            resultHTML += '<span class=\"tit\">' + eventName + '</span>';
+                            resultHTML += '</div>';
+                            resultHTML += '<div class=\"bottom-sheet_contents\">';
+                            resultHTML += '<section class=\"kb-sec event-result\">';
+                            resultHTML += '<img src=\"' + promotionData[winningNum].thumb + '\" alt=\"' + promotionData[winningNum].prizeAmount + promotionData[winningNum].prizeUnit + '\">';
+                            resultHTML += '<dl>';
+                            resultHTML += '<dt>' + promotionData[winningNum].title + ' <span class=\"num\" data-unit-after=\"' + promotionData[winningNum].prizeUnit + '\">' + promotionData[winningNum].prizeAmount + '</span>' + '</dt>';
+                            resultHTML += '<dd>';
+                            resultHTML += '참여해 주셔서 감사합니다.<br>자세한 사항은 마이데이터 선물함에서 확인하세요.';
+                            resultHTML += '</dd>';
+                            resultHTML += '</dl>';
+                            resultHTML += '</section>';
+                            resultHTML += '</div>';
+                            resultHTML += '<div class=\"bottom-sheet_buttons\">';
+                            resultHTML += '<a href=\"javascript:;\" class=\"btn-solid_sticky\" role=\"button\"><span>마이데이터 선물함</span></a>';
+                            resultHTML += '</div>';
+                            resultHTML += '<button class=\"btn-close\" data-action=\"close\"><span>닫기</span></button>';
+                            resultHTML += '</div>';
+
+                            delay = delay == undefined ? 200 : delay;
+                            //console.log(delay)
+                            $('.layered').append(resultHTML);
+                            //show result
+                            setTimeout(function() {
+                                gfn_layered.open(id);
+                            }, delay);
+
+                        },
+                        bind: function() {
+                            $this.find('.btn-run-wheel').on('click', function() {
+                                winningNum = Number(getOddsOfWinning(0.02, 0.2, 0.5, 1));
+                                roullete.run(winningNum);
+                            });
+                        }
+                    }
+                    roullete.init();
+
+                    //확률(시연용)
+                    var getOddsOfWinning = function(chance1, chance2, chance3, chance4, chance5, chance6) {
+                        var cummprob = [chance1, chance2, chance3, chance4, chance5, chance6];
+                        cummprob.length = Number(chance);
+                        var x = Math.random();
+                        var y = 0;
+                        for (y = 0; y < cummprob.length; y++) {
+                            if (cummprob[y] >= x) break;
+                        }
+                        return y;
+                    };
+                };
+            </script>
+
+
+            <div class="popup promotion" data-layered-name="eventRandom">
+                <div class="popup_header">
+                    <strong class="tit">이벤트</strong>
+                </div>
+                <div class="popup_contents">
+                    <section class="kb-sec event-area event-random">
+                        <strong class="event-tit">최초 계좌추가<br> 랜덤 뽑기 이벤트</strong>
+                        <div class="random">
+                            <span class="random-machine"></span>
+                            <span class="random-machine-handle"></span>
+                            <button type="button" class="random-machine-trigger"><span>랜덤 바로 뽑기</span></button>
+                            <span class="random-ball"></span>
+                            <span class="random-ball02"></span>
+                            <span class="random-character01"></span>
+                            <span class="random-character02"></span>
+                        </div>
+                    </section>
+
+                    <section class="kb-sec">
+                        <dl class="event-desc">
+                            <dt>기간</dt>
+                            <dd>2021.10.04(월) ~ 2021.10.29(금)</dd>
+                            <dt>대상</dt>
+                            <dd>
+                                KB마이데이터 최초동의 고객 중 통합인증 및 전체동의 완료 고객
+                            </dd>
+                            <dt>참여방법</dt>
+                            <dd>
+                                - 미완료 고객<br>
+                                ① 상단 ‘동의하러 가기’ 버튼 클릭<br>
+                                ② 통합인증 및 전체동의 완료<br>
+                                ③ 즉석룰렛 스티커 클릭<br>
+                                ④ 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ⑤ 실시간 당첨 리워드 확인가능<br>
+                                <br>
+                                - 완료 고객<br>
+                                ① 마이데이터 선물함 메뉴의 실시간 이벤트에서<br>
+                                ‘룰렛이벤트 배너’ 클릭<br>
+                                ② 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ③ 실시간 당첨 리워드 확인가능
+                            </dd>
+                            <dt>당첨자 발표</dt>
+                            <dd>
+                                100% 경품 당첨 실시간 확인 가능
+                            </dd>
+                            <dt>경품</dt>
+                            <dd>
+                                신세계이마트 상품권 3만원 (1,000명)<br>
+                                스타벅스 부드러운 디저트 세트 1매 (5,000명)<br>
+                                스타벅스 아이스 아메리카노 Tall 1매 (10,000명)<br>
+                                포인트리 500P (420,000명)
+                            </dd>
+                        </dl>
+                        <dl class="event-caution">
+                            <dt>유의사항</dt>
+                            <dd>
+                                - 본 이벤트는 KB국민은행의 이벤트로 사정에 따라 변경 또는 중단될 수 있습니다.<br>
+                                - 참여고객 대상 지급되는 경품은 참여 즉시 지급되며 마이데이터 선물함 &gt; 선물에서 확인 가능합니다.<br>
+                                - 기타 자세한 이벤트 내용은 KB마이데이터 담당자 (02-2073-0000, 평일 9~18시 / 주말 및 공휴일 휴무)에게 문의바랍니다.<br>
+                                <br>
+                                본 광고물에 대한 유효기간 2021.10.31까지 준법감시인 심의필 제2021-0000호(2021.09.27)
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+
+            <script>
+                var fnRandomEvent = function() {
+                    var $this = $('.promotion[data-layered-name=eventRandom]');
+                    var eventName = $this.find('.event-tit').text();
+                    var random = {
+                        init: function() {
+                            random.bind();
+                        },
+                        result: function(id, delay) {
+                            var resultHTML = '<div class=\"bottom-sheet\" data-layered-name=\"' + id + '\">';
+                            resultHTML += '<div class=\"bottom-sheet_header\">';
+                            resultHTML += '<span class=\"tit\">' + eventName + '</span>';
+                            resultHTML += '</div>';
+                            resultHTML += '<div class=\"bottom-sheet_contents\">';
+                            resultHTML += '<section class=\"kb-sec event-result\">';
+                            resultHTML += '<img src=\"' + promotionData[winningNum].thumb + '\" alt=\"' + promotionData[winningNum].prizeAmount + promotionData[winningNum].prizeUnit + '\">';
+                            resultHTML += '<dl>';
+                            resultHTML += '<dt>' + promotionData[winningNum].title + ' <span class=\"num\" data-unit-after=\"' + promotionData[winningNum].prizeUnit + '\">' + promotionData[winningNum].prizeAmount + '</span>' + '</dt>';
+                            resultHTML += '<dd>';
+                            resultHTML += '참여해 주셔서 감사합니다.<br>자세한 사항은 마이데이터 선물함에서 확인하세요.';
+                            resultHTML += '</dd>';
+                            resultHTML += '</dl>';
+                            resultHTML += '</section>';
+                            resultHTML += '</div>';
+                            resultHTML += '<div class=\"bottom-sheet_buttons\">';
+                            resultHTML += '<a href=\"javascript:;\" class=\"btn-solid_sticky\" role=\"button\"><span>마이데이터 선물함</span></a>';
+                            resultHTML += '</div>';
+                            resultHTML += '<button class=\"btn-close\" data-action=\"close\"><span>닫기</span></button>';
+                            resultHTML += '</div>';
+
+                            delay = delay == undefined ? 200 : delay;
+
+                            $('.layered').append(resultHTML);
+
+                            //show result
+                            setTimeout(function() {
+                                gfn_layered.open(id);
+                                $('.random-machine-handle, .random-ball').removeClass('is-animating');
+                            }, delay);
+
+                        },
+                        bind: function() {
+
+                            //버튼을 누르면 손잡이가 돌아감
+                            $this.find('.random-machine-trigger').on('click', function() {
+                                winningNum = Number(getOddsOfWinning(0, 0, 0, 1));
+                                $this.find('.random-machine-handle').addClass('is-animating');
+                            });
+
+                            //손잡이가 돌아가는 애니메이션이 끝나면 공이 나옴
+                            $this.find('.random-machine-handle').one('animationend', function() {
+                                $this.find('.random-ball').addClass('is-animating');
+                            });
+
+                            //공이 나오는 애니메이션이 끝나면 추첨하여 바텀 시트 노출
+                            $this.find('.random-ball').one('animationend', function() {
+                                random.result('bsRandom01', 500);
+                            });
+                        }
+                    }
+                    random.init();
+
+                    var getOddsOfWinning = function(chance1, chance2, chance3, chance4, chance5, chance6) {
+                        var cummprob = [chance1, chance2, chance3, chance4, chance5, chance6];
+                        var x = Math.random();
+                        var y = 0;
+                        for (y = 0; y < cummprob.length; y++) {
+                            if (cummprob[y] >= x) break;
+                        }
+                        return y;
+                    };
+                }
+            </script>
+
+
+            <div class="popup promotion" data-layered-name="eventScratch">
+                <div class="popup_header">
+                    <strong class="tit">이벤트</strong>
+                </div>
+                <div class="popup_contents">
+                    <section class="kb-sec event-area event-scratch">
+                        <strong class="event-tit">계좌 추가하면 <br>즉석복권 Dream</strong>
+                        <div class="scratch">
+                            <div class="question">두근두근 나의 결과는?</div>
+                            <div class="scratch-area" id="js-container">
+                                <div class="canvas" id="canvas">
+                                    <!-- <div class="msg">지금 바로 긁어보세요.</div> -->
+                                    <canvas id="js-canvas"></canvas>
+                                </div>
+                                <div class="result"></div>
+                            </div>
+                        </div>
+                        <span class="scratch-character"></span>
+                    </section>
+
+                    <section class="kb-sec">
+                        <dl class="event-desc">
+                            <dt>기간</dt>
+                            <dd>2021.10.04(월) ~ 2021.10.29(금)</dd>
+                            <dt>대상</dt>
+                            <dd>
+                                KB마이데이터 최초동의 고객 중 통합인증 및 전체동의 완료 고객
+                            </dd>
+                            <dt>참여방법</dt>
+                            <dd>
+                                - 미완료 고객<br>
+                                ① 상단 ‘동의하러 가기’ 버튼 클릭<br>
+                                ② 통합인증 및 전체동의 완료<br>
+                                ③ 즉석룰렛 스티커 클릭<br>
+                                ④ 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ⑤ 실시간 당첨 리워드 확인가능<br>
+                                <br>
+                                - 완료 고객<br>
+                                ① 마이데이터 선물함 메뉴의 실시간 이벤트에서<br>
+                                ‘룰렛이벤트 배너’ 클릭<br>
+                                ② 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ③ 실시간 당첨 리워드 확인가능
+                            </dd>
+                            <dt>당첨자 발표</dt>
+                            <dd>
+                                100% 경품 당첨 실시간 확인 가능
+                            </dd>
+                            <dt>경품</dt>
+                            <dd>
+                                신세계이마트 상품권 3만원 (1,000명)<br>
+                                스타벅스 부드러운 디저트 세트 1매 (5,000명)<br>
+                                스타벅스 아이스 아메리카노 Tall 1매 (10,000명)<br>
+                                포인트리 500P (420,000명)
+                            </dd>
+                        </dl>
+                        <dl class="event-caution">
+                            <dt>유의사항</dt>
+                            <dd>
+                                - 본 이벤트는 KB국민은행의 이벤트로 사정에 따라 변경 또는 중단될 수 있습니다.<br>
+                                - 참여고객 대상 지급되는 경품은 참여 즉시 지급되며 마이데이터 선물함 &gt; 선물에서 확인 가능합니다.<br>
+                                - 기타 자세한 이벤트 내용은 KB마이데이터 담당자 (02-2073-0000, 평일 9~18시 / 주말 및 공휴일 휴무)에게 문의바랍니다.<br>
+                                <br>
+                                본 광고물에 대한 유효기간 2021.10.31까지 준법감시인 심의필 제2021-0000호(2021.09.27)
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+
+            <script>
+                var fnScratchEvent = function() {
+                    var getOddsOfWinning = function(chance1, chance2, chance3, chance4, chance5, chance6) {
+                        var cummprob = [chance1, chance2, chance3, chance4, chance5, chance6];
+                        var x = Math.random();
+                        var y = 0;
+                        for (y = 0; y < cummprob.length; y++) {
+                            if (cummprob[y] >= x) break;
+                        }
+                        return y;
+                    };
+
+                    var $this = $('.promotion[data-layered-name=eventScratch]');
+                    var eventName = $this.find('.event-tit').text();
+                    var winningNum = Number(getOddsOfWinning(0, 0, 0, 1));
+                    var scratch = {
+                        init: function() {
+                            var prizeTxt = promotionData[winningNum].title + promotionData[winningNum].prizeAmount + promotionData[winningNum].prizeUnit;
+                            $this.find('.scratch-area').find('.result').text(prizeTxt);
+                        },
+                        result: function(id, delay) {
+                            var resultHTML = '<div class=\"bottom-sheet\" data-layered-name=\"' + id + '\">';
+                            resultHTML += '<div class=\"bottom-sheet_header\">';
+                            resultHTML += '<span class=\"tit\">' + eventName + '</span>';
+                            resultHTML += '</div>';
+                            resultHTML += '<div class=\"bottom-sheet_contents\">';
+                            resultHTML += '<section class=\"kb-sec event-result\">';
+                            resultHTML += '<img src=\"' + promotionData[winningNum].thumb + '\" alt=\"' + promotionData[winningNum].prizeAmount + promotionData[winningNum].prizeUnit + '\">';
+                            resultHTML += '<dl>';
+                            resultHTML += '<dt>' + promotionData[winningNum].title + '<span class=\"num\" data-unit-after=\"' + promotionData[winningNum].prizeUnit + '\">' + promotionData[winningNum].prizeAmount + '</span>' + '</dt>';
+                            resultHTML += '<dd>';
+                            resultHTML += '참여해 주셔서 감사합니다.<br>자세한 사항은 마이데이터 선물함에서 확인하세요.';
+                            resultHTML += '</dd>';
+                            resultHTML += '</dl>';
+                            resultHTML += '</section>';
+                            resultHTML += '</div>';
+                            resultHTML += '<div class=\"bottom-sheet_buttons\">';
+                            resultHTML += '<a href=\"javascript:;\" class=\"btn-solid_sticky\" role=\"button\"><span>마이데이터 선물함</span></a>';
+                            resultHTML += '</div>';
+                            resultHTML += '<button class=\"btn-close\" data-action=\"close\"><span>닫기</span></button>';
+                            resultHTML += '</div>';
+
+                            delay = delay == undefined ? 200 : delay;
+
+                            $('.layered').append(resultHTML);
+
+                            //show result
+                            setTimeout(function() {
+                                gfn_layered.open(id);
+                            }, delay);
+
+                        }
+                    };
+                    scratch.init();
+
+                    var isDrawing, lastPoint;
+                    var canvas = document.getElementById('js-canvas');
+                    var canvasWrapper = document.getElementById('canvas');
+                    var canvasWidth = Math.ceil(canvasWrapper.offsetWidth) + 2;
+                    var canvasHeight = Math.ceil(canvasWrapper.offsetHeight) + 2;
+                    var ctx = canvas.getContext('2d');
+                    var imageObj = new Image();
+                    var brush = new Image();
+
+                    imageObj.src = "../../static/images/event/scratch.png";
+                    imageObj.onload = function() {
+                        var imgWidth = imageObj.naturalWidth;
+                        var imgHeight = imageObj.naturalHeight;
+                        var screenWidth = canvasWidth;
+                        var screenHeight = canvasHeight;
+
+                        var scaleX = 1;
+                        if (imgWidth > screenWidth)
+                            scaleX = screenWidth / imgWidth;
+
+                        var scaleY = 1;
+                        if (imgHeight > screenHeight)
+                            scaleY = screenHeight / imgHeight;
+                        var scale = scaleY;
+                        if (scaleX < scaleY)
+                            scale = scaleX;
+                        if (scale < 1) {
+                            imgHeight = imgHeight * scale;
+                            imgWidth = imgWidth * scale;
+                        }
+
+                        ctx.canvas.height = imgHeight;
+                        ctx.canvas.width = imgWidth;
+
+                        ctx.drawImage(imageObj, 0, 0, imageObj.naturalWidth, imageObj.naturalHeight, 0, 0, imgWidth, imgHeight);
+                        // Show the form when Image is loaded.
+                        document.querySelectorAll('.scratch-area')[0].style.visibility = 'visible';
+                    };
+
+                    brush.src = '../../static/images/event/scarchimagetrans.png';
+
+                    canvas.addEventListener('mousedown', handleMouseDown, false);
+                    canvas.addEventListener('touchstart', handleMouseDown, false);
+                    canvas.addEventListener('mousemove', handleMouseMove, false);
+                    canvas.addEventListener('touchmove', handleMouseMove, false);
+                    canvas.addEventListener('mouseup', handleMouseUp, false);
+                    canvas.addEventListener('touchend', handleMouseUp, false);
+
+                    function distanceBetween(point1, point2) {
+                        return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+                    }
+
+                    function angleBetween(point1, point2) {
+                        return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+                    }
+
+                    // Only test every `stride` pixel. `stride`x faster,
+                    // but might lead to inaccuracy
+                    function getFilledInPixels(stride) {
+                        if (!stride || stride < 1) {
+                            stride = 1;
+                        }
+
+                        var pixels = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
+                            pdata = pixels.data,
+                            l = pdata.length,
+                            total = (l / stride),
+                            count = 0;
+
+                        // Iterate over all pixels
+                        for (var i = count = 0; i < l; i += stride) {
+                            if (parseInt(pdata[i]) === 0) {
+                                count++;
+                            }
+                        }
+
+                        return Math.round((count / total) * 100);
+                    }
+
+                    function getMouse(e, canvas) {
+                        var offsetX = 0,
+                            offsetY = 0,
+                            mx, my;
+
+                        if (canvas.offsetParent !== undefined) {
+                            do {
+                                offsetX += canvas.offsetLeft;
+                                offsetY += canvas.offsetTop;
+                            } while ((canvas = canvas.offsetParent));
+                        }
+
+                        mx = (e.pageX || e.touches[0].clientX) - offsetX;
+                        my = (e.pageY || e.touches[0].clientY) - offsetY;
+
+                        return {
+                            x: mx,
+                            y: my
+                        };
+                    }
+
+                    function handlePercentage(filledInPixels) {
+                        filledInPixels = filledInPixels || 0;
+                        //console.log(filledInPixels + '%');            
+                        if (filledInPixels > 55) {
+                            // action
+                            $this.find('.scratch-area .canvas').hide();
+                            if (!$this.find('.scratch-area .canvas').hasClass('activated')) {
+                                scratch.result('bsScratch01')
+                                $this.find('.scratch-area .canvas').addClass('activated');
+                            }
+                        }
+                    }
+
+                    function handleMouseDown(e) {
+                        isDrawing = true;
+                        lastPoint = getMouse(e, canvas);
+                    }
+
+                    function handleMouseMove(e) {
+                        if (!isDrawing) {
+                            return;
+                        }
+
+                        e.preventDefault();
+
+                        var currentPoint = getMouse(e, canvas),
+                            dist = distanceBetween(lastPoint, currentPoint),
+                            angle = angleBetween(lastPoint, currentPoint),
+                            x, y;
+
+                        for (var i = 0; i < dist; i++) {
+                            x = lastPoint.x + (Math.sin(angle) * i) - 25;
+                            y = lastPoint.y + (Math.cos(angle) * i) - 25;
+                            ctx.globalCompositeOperation = 'destination-out';
+                            ctx.drawImage(brush, x, y);
+                        }
+
+                        lastPoint = currentPoint;
+                        handlePercentage(getFilledInPixels(32));
+                    }
+
+                    function handleMouseUp(e) {
+                        isDrawing = false;
+                    }
+                }
+            </script>
+
+
+            <div class="popup promotion" data-layered-name="eventScratch02">
+                <div class="popup_header">
+                    <strong class="tit">이벤트</strong>
+                </div>
+                <div class="popup_contents">
+                    <section class="kb-sec event-area event-scratch02 not-ready">
+                        <strong class="event-tit">KB마이데이터 <br>복권 이벤트</strong>
+                        <div class="select-giveaway">
+                            <ul>
+                                <li><button type="button"><span>테슬라 자동차<br>(2명)</span></button></li>
+                                <li><button type="button"><span>다이슨 에어랩<br>(10명)</span></button></li>
+                                <li><button type="button"><span>신세계 상품권<br>5만원권<br>(1천명)</span></button></li>
+                                <li><button type="button"><span>스타벅스<br>아메리카노<br>(1만명)</span></button></li>
+                            </ul>
+                        </div>
+                        <div class="scratch">
+                            <div class="question">두근두근 나의 결과는?</div>
+                            <div class="scratch-area" id="js-container02">
+                                <div class="canvas" id="canvas02">
+                                    <!-- <div class="msg">지금 바로 긁어보세요.</div> -->
+                                    <canvas id="js-canvas02"></canvas>
+                                </div>
+                                <div class="result"></div>
+                            </div>
+                        </div>
+                        <span class="scratch-character"></span>
+                    </section>
+
+                    <section class="kb-sec">
+                        <dl class="event-desc">
+                            <dt>기간</dt>
+                            <dd>2021.10.04(월) ~ 2021.10.29(금)</dd>
+                            <dt>대상</dt>
+                            <dd>
+                                KB마이데이터 최초동의 고객 중 통합인증 및 전체동의 완료 고객
+                            </dd>
+                            <dt>참여방법</dt>
+                            <dd>
+                                - 미완료 고객<br>
+                                ① 상단 ‘동의하러 가기’ 버튼 클릭<br>
+                                ② 통합인증 및 전체동의 완료<br>
+                                ③ 즉석룰렛 스티커 클릭<br>
+                                ④ 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ⑤ 실시간 당첨 리워드 확인가능<br>
+                                <br>
+                                - 완료 고객<br>
+                                ① 마이데이터 선물함 메뉴의 실시간 이벤트에서<br>
+                                ‘룰렛이벤트 배너’ 클릭<br>
+                                ② 룰렛 이벤트의 ‘START’ 버튼 클릭<br>
+                                ③ 실시간 당첨 리워드 확인가능
+                            </dd>
+                            <dt>당첨자 발표</dt>
+                            <dd>
+                                100% 경품 당첨 실시간 확인 가능
+                            </dd>
+                            <dt>경품</dt>
+                            <dd>
+                                신세계이마트 상품권 3만원 (1,000명)<br>
+                                스타벅스 부드러운 디저트 세트 1매 (5,000명)<br>
+                                스타벅스 아이스 아메리카노 Tall 1매 (10,000명)<br>
+                                포인트리 500P (420,000명)
+                            </dd>
+                        </dl>
+                        <dl class="event-caution">
+                            <dt>유의사항</dt>
+                            <dd>
+                                - 본 이벤트는 KB국민은행의 이벤트로 사정에 따라 변경 또는 중단될 수 있습니다.<br>
+                                - 참여고객 대상 지급되는 경품은 참여 즉시 지급되며 마이데이터 선물함 &gt; 선물에서 확인 가능합니다.<br>
+                                - 기타 자세한 이벤트 내용은 KB마이데이터 담당자 (02-2073-0000, 평일 9~18시 / 주말 및 공휴일 휴무)에게 문의바랍니다.<br>
+                                <br>
+                                본 광고물에 대한 유효기간 2021.10.31까지 준법감시인 심의필 제2021-0000호(2021.09.27)
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+
+            <script>
+                var promotionData02 = [{
+                        "title": '테슬라 자동차',
+                        "prizeAmount": '2',
+                        "prizeUnit": '명',
+                        "thumb": '../../static/images/event/img-voucher.png',
+                    },
+                    {
+                        "title": '다이슨 에어랩',
+                        "prizeAmount": '10',
+                        "prizeUnit": '명',
+                        "thumb": '../../static/images/event/img-pointre.png',
+                    },
+                    {
+                        "title": '신세계 상품권 5만원권',
+                        "prizeAmount": '1',
+                        "prizeUnit": '천명',
+                        "thumb": '../../static/images/event/img-coffee.png',
+                    },
+                    {
+                        "title": '스타벅스 아메리카노',
+                        "prizeAmount": '1',
+                        "prizeUnit": '만명',
+                        "thumb": '../../static/images/event/img-pointre.png',
+                    },
+                ];
+
+                var fnScratchEvent02 = function() {
+                    var selectedGiveaway = 0;
+
+                    $('.event-scratch02 .select-giveaway').on('click', 'button', function() {
+                        $('.event-scratch02').removeClass('not-ready');
+                        selectedGiveaway = $(this).parent('li').index();
+                        scratchEv();
+
+                    });
+
+                    function scratchEv() {
+                        var prizeTxt;
+                        var $this = $('.promotion[data-layered-name=eventScratch02]');
+                        var eventName = $this.find('.event-tit').text();
+                        var winningNum = selectedGiveaway;
+                        var scratch = {
+                            init: function() {
+                                prizeTxt = Math.random() < 0.001 ? promotionData02[winningNum].title : '꽝! 다음 기회에~';
+
+                                $this.find('.result').text(prizeTxt);
+                            },
+                            result: function(id, delay) {
+                                var resultHTML = '<div class=\"bottom-sheet\" data-layered-name=\"' + id + '\">';
+                                resultHTML += '<div class=\"bottom-sheet_header\">';
+                                resultHTML += '<span class=\"tit\">' + eventName + '</span>';
+                                resultHTML += '</div>';
+                                resultHTML += '<div class=\"bottom-sheet_contents\">';
+                                resultHTML += '<section class=\"kb-sec event-result\">';
+                                resultHTML += '<img src=\"' + promotionData02[winningNum].thumb + '\" alt=\"' + promotionData02[winningNum].prizeAmount + promotionData02[winningNum].prizeUnit + '\">';
+                                resultHTML += '<dl>';
+                                resultHTML += '<dt>' + prizeTxt + '</dt>';
+                                resultHTML += '<dd>';
+                                resultHTML += '참여해 주셔서 감사합니다.<br>자세한 사항은 마이데이터 선물함에서 확인하세요.';
+                                resultHTML += '</dd>';
+                                resultHTML += '</dl>';
+                                resultHTML += '</section>';
+                                resultHTML += '</div>';
+                                resultHTML += '<div class=\"bottom-sheet_buttons\">';
+                                resultHTML += '<a href=\"javascript:;\" class=\"btn-solid_sticky\" role=\"button\"><span>마이데이터 선물함</span></a>';
+                                resultHTML += '</div>';
+                                resultHTML += '<button class=\"btn-close\" data-action=\"close\"><span>닫기</span></button>';
+                                resultHTML += '</div>';
+
+                                delay = delay == undefined ? 200 : delay;
+
+                                $('.layered').append(resultHTML);
+
+                                //show result
+                                setTimeout(function() {
+                                    gfn_layered.open(id);
+                                }, delay);
+
+                            }
+                        };
+                        scratch.init();
+
+                        var isDrawing, lastPoint;
+                        var canvasContainer = document.getElementById('js-container02');
+                        var canvas = document.getElementById('js-canvas02');
+                        var canvasWrapper = document.getElementById('canvas02');
+                        var canvasWidth = Math.ceil(canvasWrapper.offsetWidth) + 2;
+                        var canvasHeight = Math.ceil(canvasWrapper.offsetHeight) + 2;
+                        var ctx = canvas.getContext('2d');
+                        var imageObj = new Image();
+                        var brush = new Image();
+
+                        imageObj.src = "../../static/images/event/scratch.png";
+                        imageObj.onload = function() {
+                            var imgWidth = imageObj.naturalWidth;
+                            var imgHeight = imageObj.naturalHeight;
+                            var screenWidth = canvasWidth;
+                            var screenHeight = canvasHeight;
+
+                            var scaleX = 1;
+                            if (imgWidth > screenWidth)
+                                scaleX = screenWidth / imgWidth;
+
+                            var scaleY = 1;
+                            if (imgHeight > screenHeight)
+                                scaleY = screenHeight / imgHeight;
+                            var scale = scaleY;
+                            if (scaleX < scaleY)
+                                scale = scaleX;
+                            if (scale < 1) {
+                                imgHeight = imgHeight * scale;
+                                imgWidth = imgWidth * scale;
+                            }
+
+                            ctx.canvas.height = imgHeight;
+                            ctx.canvas.width = imgWidth;
+
+                            ctx.drawImage(imageObj, 0, 0, imageObj.naturalWidth, imageObj.naturalHeight, 0, 0, imgWidth, imgHeight);
+                            // Show the form when Image is loaded.
+                            //document.querySelectorAll('.scratch-area')[0].style.visibility = 'visible';
+                        };
+
+                        brush.src = '../../static/images/event/scarchimagetrans.png';
+
+                        canvas.addEventListener('mousedown', handleMouseDown, false);
+                        canvas.addEventListener('touchstart', handleMouseDown, false);
+                        canvas.addEventListener('mousemove', handleMouseMove, false);
+                        canvas.addEventListener('touchmove', handleMouseMove, false);
+                        canvas.addEventListener('mouseup', handleMouseUp, false);
+                        canvas.addEventListener('touchend', handleMouseUp, false);
+
+                        // canvasContainer.addEventListener('mousedown', scrollLock, false);
+                        // canvasContainer.addEventListener('touchstart', scrollLock, false);
+                        // canvasContainer.addEventListener('mouseup', scrollUnlock, false);
+                        // canvasContainer.addEventListener('touchend', scrollUnlock, false);
+
+                        function distanceBetween(point1, point2) {
+                            return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+                        }
+
+                        function angleBetween(point1, point2) {
+                            return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+                        }
+
+                        // Only test every `stride` pixel. `stride`x faster,
+                        // but might lead to inaccuracy
+                        function getFilledInPixels(stride) {
+                            if (!stride || stride < 1) {
+                                stride = 1;
+                            }
+
+                            var pixels = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
+                                pdata = pixels.data,
+                                l = pdata.length,
+                                total = (l / stride),
+                                count = 0;
+
+                            // Iterate over all pixels
+                            for (var i = count = 0; i < l; i += stride) {
+                                if (parseInt(pdata[i]) === 0) {
+                                    count++;
+                                }
+                            }
+
+                            return Math.round((count / total) * 100);
+                        }
+
+                        function getMouse(e, canvas) {
+                            var offsetX = 0,
+                                offsetY = 0,
+                                mx, my;
+
+                            if (canvas.offsetParent !== undefined) {
+                                do {
+                                    offsetX += canvas.offsetLeft;
+                                    offsetY += canvas.offsetTop;
+                                } while ((canvas = canvas.offsetParent));
+                            }
+
+                            mx = (e.pageX || e.touches[0].clientX) - offsetX;
+                            my = (e.pageY || e.touches[0].clientY) - offsetY;
+
+                            return {
+                                x: mx,
+                                y: my
+                            };
+                        }
+
+                        function handlePercentage(filledInPixels) {
+                            filledInPixels = filledInPixels || 0;
+                            //console.log(filledInPixels + '%');                
+                            if (filledInPixels > 55) {
+                                // action
+                                $this.find('.canvas').hide();
+                                if (!$this.find('.canvas').hasClass('activated')) {
+                                    scratch.result('bsScratch02')
+                                    $this.find('.canvas').addClass('activated');
+                                }
+                            }
+                        }
+
+                        function handleMouseDown(e) {
+                            isDrawing = true;
+                            lastPoint = getMouse(e, canvas);
+                        }
+
+                        function handleMouseMove(e) {
+                            if (!isDrawing) {
+                                return;
+                            }
+
+                            e.preventDefault();
+
+                            var currentPoint = getMouse(e, canvas),
+                                dist = distanceBetween(lastPoint, currentPoint),
+                                angle = angleBetween(lastPoint, currentPoint),
+                                x, y;
+
+                            for (var i = 0; i < dist; i++) {
+                                x = lastPoint.x + (Math.sin(angle) * i) - 25;
+                                y = lastPoint.y + (Math.cos(angle) * i) - 25;
+                                ctx.globalCompositeOperation = 'destination-out';
+                                ctx.drawImage(brush, x, y);
+                            }
+
+                            lastPoint = currentPoint;
+                            handlePercentage(getFilledInPixels(32));
+                        }
+
+                        function handleMouseUp(e) {
+                            isDrawing = false;
+                        }
+                    }
+                }
+            </script>
+
+
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+
+    </div>
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+
+    <script>
+        var promotionData = [{
+                "title": '신세계이마트 상품권',
+                "prizeAmount": '30,000',
+                "prizeUnit": '원',
+                "thumb": '../../static/images/event/img-voucher.png',
+            },
+            {
+                "title": 'KB 포인트리',
+                "prizeAmount": '500',
+                "prizeUnit": 'P',
+                "thumb": '../../static/images/event/img-pointre.png',
+            },
+            {
+                "title": '스타벅스 디저트 세트',
+                "prizeAmount": '1',
+                "prizeUnit": '매',
+                "thumb": '../../static/images/event/img-coffee.png',
+            },
+            {
+                "title": 'KB 포인트리',
+                "prizeAmount": '1,000',
+                "prizeUnit": 'P',
+                "thumb": '../../static/images/event/img-pointre.png',
+            },
+            {
+                "title": 'KB 포인트리',
+                "prizeAmount": '1,200',
+                "prizeUnit": 'P',
+                "thumb": '../../static/images/event/img-pointre.png',
+            },
+            {
+                "title": 'KB 포인트리',
+                "prizeAmount": '1,500',
+                "prizeUnit": 'P',
+                "thumb": '../../static/images/event/img-pointre.png',
+            },
+        ];
+
+        //룰렛
+        $('.btn-event-roullete').on('click', function() {
+            var size = $(this).data('roullete-size');
+            gfn_layered.open('eventRoullete');
+            fnEventRoullete(size);
+        });
+
+        //랜덤 뽑기
+        $('.btn-event-random').on('click', function() {
+            gfn_layered.open('eventRandom');
+            fnRandomEvent();
+        });
+
+        //스크래치
+        $('.btn-event-scratch').on('click', function() {
+            gfn_layered.open('eventScratch');
+            fnScratchEvent();
+        });
+
+        //경품 선택 후 스크래치
+        $('.btn-event-scratch02').on('click', function() {
+            gfn_layered.open('eventScratch02');
+            fnScratchEvent02();
+        });
+    </script>
+
+
+</body>
+
+</html>

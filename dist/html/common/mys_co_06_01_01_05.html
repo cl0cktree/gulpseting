@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자산 연동 | 약관동의 | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+
+        <!-- app-container //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content">
+                <!-- SECTION //-->
+                <section class="kb-sec asset-sync">
+                    <div class="character-box">
+                        <img src="../../static/images/etc/data-download@2x.png" alt=""><!-- 수정 : 2021.06.25 -->
+                    </div>
+                    <p>선택하신 기관의 데이터를 <br>연결하고 있습니다.</p><!-- 수정 : 2021.06.25 -->
+                    <div class="loader"><i></i><i></i><i></i><i></i><span>로딩중</span></div>
+                </section>
+                <section class="kb-sec asset-sync02">
+                    <ul class="checkbox-group">
+                        <li><span class="form-checkbox_20"><input type="checkbox" id="AssetSync01" disabled checked><label for="AssetSync01">우체국</label></span></li>
+                        <li><span class="form-checkbox_20"><input type="checkbox" id="AssetSync02" disabled><label for="AssetSync02">IBK기업은행</label></span></li>
+                        <li><span class="form-checkbox_20"><input type="checkbox" id="AssetSync03" disabled><label for="AssetSync03">SC제일은행</label></span></li>
+                    </ul>
+                </section>
+                <!--  // SECTION -->
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <!-- popup (Full Page) Sample //-->
+            <div class="popup" data-layered-name="popupSample">
+                <div class="popup_header">
+                    <strong class="tit">팝업 타이틀</strong>
+                </div>
+                <div class="popup_contents">
+                    <div class="tab swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide is-active"><a href="#target01">홈</a></li>
+                            <li class="swiper-slide"><a href="#target02">메뉴명2</a></li>
+                            <li class="swiper-slide"><a href="#target03">메뉴명3</a></li>
+                        </ul>
+                    </div>
+                    <section class="kb-sec bg-gray">
+                        bg-gray<br>
+                        bg-gray<br>
+                        bg-gray<br>
+                        bg-gray<br>
+                        bg-gray<br>
+                        bg-gray<br>
+                        bg-gray<br>
+                        bg-gray<br>
+                        bg-gray<br>
+                    </section>
+                    <section class="kb-sec">
+                        팝업 컨텐츠<br>
+                        <p><button type="button" class="btn-line" data-call-layered="modalSample"><span>모달 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="popupSample02"><span>팝업02 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="bsSample"><span>바텀시트 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="bsSample02"><span>바텀시트02 호출</span></button></p>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+
+                    </section>
+                </div>
+                <div class="popup_buttons sticky-bottom">
+                    <div class="btn-area">
+                        <button type="button" class="btn-solid_sticky" data-action="close"><span>확인</span></button>
+                    </div>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- // popup (Full Page) Sample -->
+            <!-- popup (Full Page) Sample //-->
+            <div class="popup" data-layered-name="popupSample02">
+                <div class="popup_header">
+                    <strong class="tit">팝업 타이틀02</strong>
+                </div>
+                <div class="popup_contents">
+                    <div class="tab swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide is-active"><a href="#target01">홈</a></li>
+                            <li class="swiper-slide"><a href="#target02">메뉴명2</a></li>
+                            <li class="swiper-slide"><a href="#target03">메뉴명3</a></li>
+                        </ul>
+                    </div>
+                    <section class="kb-sec">
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        <p><button type="button" class="btn-line" data-call-layered="modalSample"><span>모달 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="popupSample"><span>팝업 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="bsSample"><span>바텀시트 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="bsSample02"><span>바텀시트02 호출</span></button></p>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+                        팝업 컨텐츠<br>
+
+                    </section>
+                </div>
+                <div class="popup_buttons sticky-bottom">
+                    <div class="btn-area">
+                        <button type="button" class="btn-solid_sticky" data-action="close"><span>확인</span></button>
+                    </div>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- // popup (Full Page) Sample -->
+
+            <!-- Bottom Sheet 샘플 //-->
+            <div class="bottom-sheet" data-layered-name="bsSample">
+                <div class="bottom-sheet_header">
+                    <span class="tit">바텀시트 타이틀</span>
+                </div>
+                <div class="bottom-sheet_contents">
+                    <!-- 바텀 시트 내용 -->
+                    <section class="kb-sec">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam non, eaque dolore velit corporis eius perferendis officia, atque excepturi consequatur impedit? Illo doloremque minus odit placeat? Accusamus sapiente ullam distinctio.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque, molestiae quam non odio, placeat quia vero quibusdam necessitatibus dolorum vitae. Natus earum debitis facere nisi nesciunt enim, expedita ea!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, est expedita hic debitis velit odit voluptatem minima deleniti similique aliquam vitae provident nam reprehenderit doloremque architecto magni optio iusto ipsa.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic earum ducimus distinctio? Vero, id, enim sint voluptate aliquid sed, provident quaerat earum ducimus atque officiis delectus! Sunt veniam tempore cum?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repudiandae sequi animi a nam, doloremque at repellendus totam maxime alias cupiditate aspernatur quo obcaecati nisi nihil eos? Quis, maxime molestias.</p>
+                        <p><button type="button" class="btn-line" data-call-layered="popupSample"><span>팝업 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="popupSample02"><span>팝업02 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="bsSample02"><span>바텀시트02 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="modalSample"><span>모달 호출</span></button></p>
+                    </section>
+                </div>
+                <div class="bottom-sheet_buttons">
+                    <button class="btn-solid_sticky lv2" data-action="close"><span>취소</span></button>
+                    <button class="btn-solid_sticky"><span>확인</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //Bottom Sheet -->
+            <!-- Bottom Sheet 샘플 //-->
+            <div class="bottom-sheet" data-layered-name="bsSample02">
+                <div class="bottom-sheet_header">
+                    <span class="tit">바텀시트 타이틀02</span>
+                </div>
+                <div class="bottom-sheet_contents">
+                    <!-- 바텀 시트 내용 -->
+                    <section class="kb-sec">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam non, eaque dolore velit corporis eius perferendis officia, atque excepturi consequatur impedit? Illo doloremque minus odit placeat? Accusamus sapiente ullam distinctio.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque, molestiae quam non odio, placeat quia vero quibusdam necessitatibus dolorum vitae. Natus earum debitis facere nisi nesciunt enim, expedita ea!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, est expedita hic debitis velit odit voluptatem minima deleniti similique aliquam vitae provident nam reprehenderit doloremque architecto magni optio iusto ipsa.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic earum ducimus distinctio? Vero, id, enim sint voluptate aliquid sed, provident quaerat earum ducimus atque officiis delectus! Sunt veniam tempore cum?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repudiandae sequi animi a nam, doloremque at repellendus totam maxime alias cupiditate aspernatur quo obcaecati nisi nihil eos? Quis, maxime molestias.</p>
+                        <p><button type="button" class="btn-line" data-call-layered="popupSample"><span>팝업 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="popupSample02"><span>팝업02 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="bsSample"><span>바텀시트 호출</span></button></p>
+                        <p><button type="button" class="btn-line" data-call-layered="modalSample"><span>모달 호출</span></button></p>
+                    </section>
+                </div>
+                <div class="bottom-sheet_buttons">
+                    <button class="btn-solid_sticky lv2" data-action="close"><span>취소</span></button>
+                    <button class="btn-solid_sticky"><span>확인</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //Bottom Sheet -->
+            <!-- Modal 샘플 //-->
+            <div class="modal" data-layered-name="modalSample">
+                <div class="modal_header">
+                    <strong class="tit">모달 타이틀</strong>
+                </div>
+                <div class="modal_contents">
+                    모달 내용<br>
+                    모달 내용<br>
+                    모달 내용<br>
+                </div>
+                <div class="modal_buttons btn-area">
+                    <button class="btn-solid_sticky lv2" data-action="close"><span>취소</span></button>
+                    <button class="btn-solid_sticky"><span>확인</span></button>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!-- (작성자: 누리어 시스템 이진우)// -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Last Depth | 1st Depth | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+
+    </div>
+
+    <div class="layered">
+
+        <!-- Modal 샘플 //-->
+        <div class="modal" data-layered-name="modalEmergency02">
+            <div class="modal_header">
+                <strong class="tit">시스템 점검</strong>
+            </div>
+            <div class="modal_contents">
+                <ul data-style="list">
+                    <li>앱에 문제가 발생해 긴급 점검에 있으며 신속하게 끝내겠습니다.</li>
+                    <li>중단시간 : <span class="num">2021.05.01 00:00</span></li>
+                    <li>재개시간 : <span class="num">2021.05.01 00:00</span></li>
+                    <li>사용에 불편을 드려 죄송합니다.</li>
+                </ul>
+            </div>
+            <div class="modal_buttons btn-area">
+                <button class="btn-solid_sticky" data-action="close"><span>닫기</span></button>
+            </div>
+        </div>
+        <!-- //Modal -->
+
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+    <script>
+        gfn_layered.open('modalEmergency02');
+    </script>
+
+</body>
+
+</html>

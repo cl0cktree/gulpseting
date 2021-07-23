@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- [MYS_AS_17_01_04_p1] 작성자: 유플리트 이현섭 -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자산 | My금고 | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app my-safe-back-top">
+        <!-- app-header (for MyMoney) //-->
+        <!-- app-header [s] -->
+        <!-- data-type 
+    타이틀이 없을 경우 빈값(<strong class="page-tit"></strong>) - 마크업은 반드시 존재해야함
+    '' : 뒤로가기 + 타이틀 + 전체메뉴
+    'close': 타이틀 + 닫기버튼만
+    'title' : 타이틀만
+    'back' : 타이틀 + back버튼만
+    'notice' : 알림 + 타이틀 + 전체메뉴    
+-->
+        <header class="app-header" data-type="close">
+            <a href="javascript:;" class="btn-notice-box" role="button"><i class="icon-bell2_24">알림함으로 이동</i></a>
+            <a href="javascript:history.back();" class="btn-history-back" role="button"><i class="icon-back">뒤로가기</i></a>
+            <strong class="page-tit">현금(원화/외화)</strong>
+            <button type="button" class="btn-allmenu"><i class="icon-menu">전체메뉴</i></button>
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <div class="app-menu">
+            <!-- 수정 : 2021.06.24  // -->
+            <div class="all-menu-top">
+                <div class="util-menu">
+                    <a href="javascript:;" class="" role="button"><i class="icon-setting_24">설정</i></a>
+                    <a href="javascript:;" class="all-menu-notice new" role="button"><i class="icon-bell_24">알림</i></a><!-- 새로운 알림이 있을 때 .new -->
+                    <button type="button" class="btn-close"><span>닫기</span></button>
+                </div>
+                <div class="user-name"><a href="javascript:;"><strong>김국민</strong>님<i class="icon-move"></i></a></div>
+            </div>
+            <ul class="major-menu">
+                <li><a href="javascript:;"><span><i class="icon-mn_asset"></i></span><strong>자산등록</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_report"></i></span><strong>소비리포트</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_notice"></i></span><strong>공지사항</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_mydata"></i></span><strong>선물함</strong></a></li>
+            </ul>
+            <!--  // 수정 : 2021.06.24 -->
+            <div class="all-menu-list-wrap">
+                <div class="manage-mydata">
+                    <strong class="tit">마이데이터 관리</strong>
+                    <a href="javascript:;"><span>70</span><i class="icon-move"></i></a>
+                </div>
+                <!-- 수정 : 2021.06.24 메뉴 순서 변경 // -->
+                <ul class="all-menu-list">
+                    <li class="is-active">
+                        <a href="javascript:;">자산</a>
+                        <ul>
+                            <li><a href="javascript:;">자산통합조회</a></li>
+                            <li><a href="javascript:;">입출금&middot;페이</a></li>
+                            <li><a href="javascript:;">예적금</a></li>
+                            <li><a href="javascript:;">투자</a></li>
+                            <li><a href="javascript:;">보험</a></li>
+                            <li><a href="javascript:;">대출&middot;부채</a></li>
+                            <li><a href="javascript:;">부동산</a></li>
+                            <li><a href="javascript:;">자동차</a></li>
+                            <li><a href="javascript:;">My 금고</a></li>
+                            <li><a href="javascript:;">외화</a></li>
+                            <li><a href="javascript:;">적립포인트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지출</a>
+                        <ul>
+                            <li><a href="javascript:;">가계부</a></li>
+                            <li><a href="javascript:;">정기지출</a></li>
+                            <li><a href="javascript:;">카드관리</a></li>
+                            <li><a href="javascript:;">소비리포트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">목표 챌린지</a>
+                        <ul>
+                            <li><a href="javascript:;">아낀만큼</a></li>
+                            <li><a href="javascript:;">쓰는만큼</a></li>
+                            <li><a href="javascript:;">남들만큼</a></li>
+                            <li><a href="javascript:;">저금통</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">제휴/특화</a>
+                        <ul>
+                            <li><a href="javascript:;">신용</a></li>
+                            <li><a href="javascript:;">My Fun Data</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">슬그Money</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">D플랜</a>
+                        <ul>
+                            <li><a href="javascript:;">월수령액</a></li>
+                            <li><a href="javascript:;">라이프이벤트</a></li>
+                            <li><a href="javascript:;">나의기록</a></li>
+                            <li><a href="javascript:;">D플랜 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객센터</a>
+                        <ul>
+                            <li><a href="javascript:;">FAQ</a></li>
+                            <li><a href="javascript:;">전화상담</a></li>
+                            <li><a href="javascript:;">약관 및 정책</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">마이페이지</a>
+                        <ul>
+                            <li><a href="javascript:;">마이데이터 관리</a></li>
+                            <li><a href="javascript:;">내정보</a></li>
+                            <li><a href="javascript:;">마이데이터 선물함</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2021.06.24 메뉴 순서 변경 -->
+            </div>
+        </div>
+
+        <!-- // app-header (for MyMoney) -->
+
+        <!-- app-container //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content my-asset pop-my-asset">
+
+
+                <section class="kb-sec">
+                    <div class="pop-notice">
+                        <span>외화현찰 등록시 KB외환 매매기준율을 적용한 <br>
+                            원화환산금액을 확인할 수 있습니다.</span>
+                        <em>* 표시된 항목은 필수 입력 사항입니다.</em>
+                    </div>
+                </section>
+                <section class="kb-sec cash-registration">
+                    <div class="kb-form  no-transition" data-status="">
+                        <label for="cashType" class="required">통화</label>
+                        <div class="kb-form_inner form-select">
+                            <button type="button" class="selected-option" data-call-layered="mys_as_04_02_00_p1"></button>
+                            <select name="" id="cashType" title="통화 선택">
+                                <option value="">통화 선택</option>
+                                <option value="KRW" selected="">KRW (한국)</option>
+                                <option value="USD">USD (미국 달러)</option>
+                                <option value="JPY">JPY (일본 엔)</option>
+                                <option value="CNY">CNY (중국 위안)</option>
+                                <option value="EUR">EUR (유럽연합 유로)</option>
+                                <option value="GBP">GBP (영국 파운드)</option>
+                                <option value="CAD">CAD (캐나다달러)</option>
+                                <option value="AUD">AUD (호주 달러)</option>
+                                <option value="NZD">NZD (뉴질랜드 달러)</option>
+                                <option value="HKD">HKD (홍콩달러)</option>
+                                <option value="SGD">SGD (싱카폴 달러)</option>
+                                <option value="CHF">CHF (스위스 프랑)</option>
+                                <option value="THB">THB (태국 바트)</option>
+                                <option value="SEK">SEK (스웨덴 크로나)</option>
+                                <option value="DKK">DKK (덴마크 크로네)</option>
+                                <option value="NZK">NZK (노르웨이 크로네)</option>
+                                <option value="TWD">TWD (대만 달러)</option>
+                                <option value="MYR">MYR (말레이시아 링킷)</option>
+                                <option value="VND">VND (베트남 동)</option>
+                                <option value="IDR">IDR (인도네시아 루피아)</option>
+                                <option value="MYR">MYR (말레이시아 링킷)</option>
+                                <option value="PHP">PHP (필리핀 페소)</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                <section class="kb-sec cash-type">
+                    <!--외화//-->
+                    <div class="kb-form cash_2 not-ready no-transition" data-status="">
+                        <label for="kbFormInput31" class="required">보유금액</label>
+                        <div class="kb-form_inner form-text">
+                            <input type="text" inputmode="decimal" id="kbFormInput31" placeholder="금액을 입력해 주세요" value="">
+                            <button class="btn-data-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                        <em class="validation">Message</em>
+                    </div>
+                    <div class="kb-form cash_2 not-ready no-transition" data-status="info">
+                        <label for="kbFormInput32" class="required">원화환산금액</label>
+                        <div class="kb-form_inner form-text">
+                            <input type="text" id="kbFormInput32" value="" placeholder="">
+                            <button class="btn-data-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                        <button class="btn-line"><span>조회</span></button>
+                        <em class="validation">보유금액 입력 후 조회 버튼을 누르시면 원화환산금액이 조회됩니다.</em>
+                        <em class="validation">원화환산금액은 ‘매매기준율’을 적용하기 때문에 실제 매매시 가격과 다를 수 있습니다.<br> (1달러 = 1,000원 / 2021.04.27 14:44:35 2회차 매매기준율)</em>
+                    </div>
+                    <!--//외화-->
+                    <!--현금//-->
+                    <div class="kb-form cash not-ready no-transition" data-status="">
+                        <label for="kbFormInput34" class="required">현금금액</label>
+                        <div class="kb-form_inner form-text">
+                            <input type="text" inputmode="numeric" id="kbFormInput34" placeholder="금액을 입력해 주세요" value="10000000" data-unit="원" data-action="autoSeperator">
+                            <button class="btn-data-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                        <!-- <em class="validation">Message</em> -->
+                    </div>
+                    <!--//현금-->
+                </section>
+                <section class="kb-sec nickname">
+                    <div class="kb-form not-ready no-transition" data-status="">
+                        <label for="kbFormInput33">별명</label>
+                        <div class="kb-form_inner form-text">
+                            <input type="text" id="kbFormInput33" value="비상금" placeholder="최대 10자를 입력해주세요.">
+                            <button class="btn-data-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="kb-sec sticky-bottom">
+                    <div class="btn-area">
+                        <button class="btn-solid_sticky lv2"><span>취소</span></button>
+                        <button class="btn-solid_sticky"><span>수정</span></button>
+                    </div>
+                </section>
+
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <!-- [MYS_AS_04_02_00_P1] 통화선택 (작성자: 누리어 시스템 김은경)// -->
+            <!-- 통화선택// -->
+            <div class="bottom-sheet full-size" data-layered-name="mys_as_04_02_00_p1">
+                <div class="bottom-sheet_header">
+                    <span class="tit">통화선택</span>
+                </div>
+                <div class="bottom-sheet_contents">
+                    <!-- 2021-07-06 수정 // -->
+                    <section class="kb-sec tab_contents">
+                        <div class="is-active">
+                            <ul class="grid-list" data-col="3">
+                                <li><button type="button" data-value="KRW" data-action="select"><img src="../../static/images/flag/KR.png" alt="KRW 아이콘"><span>KRW<br>(한국)</span></button></li>
+                                <li><button type="button" data-value="USD" data-action="select"><img src="../../static/images/flag/US.png" alt="USD 아이콘"><span>USD<br>(미국달러)</span></button></li>
+                                <li><button type="button" data-value="JPY" data-action="select"><img src="../../static/images/flag//JP.png" alt="JPY 아이콘"><span>JPY<br>(일본 엔)</span></button></li>
+                                <li><button type="button" data-value="CNY" data-action="select"><img src="../../static/images/flag/CN.png" alt="CNY 아이콘"><span>CNY<br>(중국 위안)</span></button></li>
+                                <li><button type="button" data-value="EUR" data-action="select"><img src="../../static/images/flag/B1.png" alt="EUR 아이콘"><span>EUR<br>(유럽연합 유로)</span></button></li>
+                                <li><button type="button" data-value="GBP" data-action="select"><img src="../../static/images/flag/GB.png" alt="GBP 아이콘"><span>GBP<br>(영국 파운드)</span></button></li>
+                                <li><button type="button" data-value="CAD" data-action="select"><img src="../../static/images/flag/CA.png" alt="CAD 아이콘"><span>CAD<br>(캐나다달러)</span></button></li>
+                                <li><button type="button" data-value="AUD" data-action="select"><img src="../../static/images/flag/AU.png" alt="AUD 아이콘"><span>AUD<br>(호주 달러)</span></button></li>
+                                <li><button type="button" data-value="NZD" data-action="select"><img src="../../static/images/flag/NZ.png" alt="NZD 아이콘"><span>NZD<br>(뉴질랜드 달러)</span></button></li>
+                                <li><button type="button" data-value="HKD" data-action="select"><img src="../../static/images/flag/HK.png" alt="HKD 아이콘"><span>HKD<br>(홍콩달러)</span></button></li>
+                                <li><button type="button" data-value="SGD" data-action="select"><img src="../../static/images/flag/SG.png" alt="SGD 아이콘"><span>SGD<br>(싱가폴 달러)</span></button></li>
+                                <li><button type="button" data-value="CHF" data-action="select"><img src="../../static/images/flag/CH.png" alt="CHF 아이콘"><span>CHF<br>(스위스 프랑)</span></button></li>
+                                <li><button type="button" data-value="THB" data-action="select"><img src="../../static/images/flag/TH.png" alt="THB 아이콘"><span>THB<br>(태국 바트)</span></button></li>
+                                <li><button type="button" data-value="SEK" data-action="select"><img src="../../static/images/flag/SE.png" alt="SEK 아이콘"><span>SEK<br>(스웨덴 크로나)</span></button></li>
+                                <li><button type="button" data-value="DKK" data-action="select"><img src="../../static/images/flag/DK.png" alt="DKK 아이콘"><span>DKK<br>(덴마크 크로네)</span></button></li>
+                                <li><button type="button" data-value="NZK" data-action="select"><img src="../../static/images/flag/NO.png" alt="NZK 아이콘"><span>NZK<br>(노르웨이 크로네)</span></button></li>
+                                <li><button type="button" data-value="TWD" data-action="select"><img src="../../static/images/flag/TW.png" alt="TWD 아이콘"><span>TWD<br>(대만 달러)</span></button></li>
+                                <li><button type="button" data-value="MYR" data-action="select"><img src="../../static/images/flag/MY.png" alt="MYR 아이콘"><span>MYR<br>(말레이시아 링킷)</span></button></li>
+                                <li><button type="button" data-value="VND" data-action="select"><img src="../../static/images/flag/VN.png" alt="VND 아이콘"><span>VND<br>(베트남 동)</span></button></li>
+                                <li><button type="button" data-value="IDR" data-action="select"><img src="../../static/images/flag/ID.png" alt="IDR 아이콘"><span>IDR<br>(인도네시아 루피아)</span></button></li>
+                                <li><button type="button" data-value="PHP" data-action="select"><img src="../../static/images/flag/PH.png" alt="PHP 아이콘"><span>PHP<br>(필리핀 페소)</span></button></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- // 2021-07-06 수정 -->
+                </div>
+                <div class="bottom-sheet_buttons">
+                    <button class="btn-solid_sticky" data-action="close"><span>확인</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //통화선택  -->
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+    <script>
+        //통화선택
+        var $cashWrap = $('.cash-type');
+        if ($cashWrap) {
+            $cashWrap.find('.cash').show();
+            $('.bottom-sheet[data-layered-name=mys_as_04_02_00_p1]').on('click', '[data-action=select]', function() {
+                var txt = $('#cashType').find('option:selected').val();
+                switch (txt) {
+                    case 'KRW':
+                        $cashWrap.find('.kb-form').hide();
+                        $cashWrap.find('.cash').show();
+                        break
+                    default:
+                        $cashWrap.find('.kb-form').hide();
+                        $cashWrap.find('.cash_2').show();
+                        break
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

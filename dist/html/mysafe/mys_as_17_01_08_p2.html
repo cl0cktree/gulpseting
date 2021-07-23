@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- [MYS_AS_17_01_08_P1] 작성자: 유플리트 이현섭 -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자산 | My금고 | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- app-header (for MyMoney) //-->
+        <!-- app-header [s] -->
+        <header class="app-header">
+            <strong class="page-tit">금(Gold)</strong>
+            <!-- <button class="btn-close"><span>닫기</span></button> -->
+            <!-- 수정 : layer 팝업 -> 페이지로 전환용 -->
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <!-- // app-header (for MyMoney) -->
+
+        <!-- app-container //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content my-safe-pop-gold my-asset pop-my-asset">
+                <section class="kb-sec">
+                    <div class="pop-notice wide header">
+                        <span>
+                            <strong class="h4">
+                                현재 금 시세를 반영한 원화환산금액을 확인할 수 있습니다.
+                            </strong>
+                        </span>
+                        <em class="mt4">* 항목을 터치하면 수정모드로 전환 됩니다. <br>&nbsp;&nbsp; 수정 후 저장 버튼으로 저장하세요.</em>
+                    </div>
+                </section>
+                <section class="kb-sec gold-input-form mt28">
+                    <div class="kb-form_multi safe-relative-flex">
+                        <strong class="tit required">보유(gram)</strong>
+                        <div class="kb-form not-ready no-transition gold-input-num" data-status="info">
+                            <!-- 20210719 수정 -->
+                            <!-- <label for="mysafe_01" class="gold-conversion-titlte my-gold-gram mb4 required">보유(gram)</label> -->
+                            <!-- <label for="mysafe_01" class="gold-conversion-titlte my-gold-done mb4 required safe-display-none">보유(돈)</label> -->
+                            <div class="kb-form_inner form-text">
+                                <input type="text" class="gold-unit-input" id="mysafe_01" placeholder="0.00" value="37.5">
+                                <button class="btn-data-clear gold-unit-clear"><i class="icon-data-clear_24">지우기</i></button>
+                            </div>
+                        </div>
+                        <div class="kb-form not-ready no-transition gold-unit-form" data-status="">
+                            <!-- <label for="" class="gold-unit-title"></label> -->
+                            <div class="kb-form_inner form-select">
+                                <button type="button" class="selected-option btn-glod-unit" data-call-layered="MYS_AS_17_01_08_BS2" id="mysafe_02"></button>
+                                <select class="gold-unit" name="" id="mysafe_03" title="금 단위선택">
+                                    <option value="">그램</option>
+                                    <option value="goldUnit01" selected>그램</option>
+                                    <option value="goldUnit02">돈</option>
+                                </select>
+                            </div>
+                        </div>
+                        <em class="tit my-gold-conversion-position align-r mt12">1돈 = 3.75g</em>
+                        <!--
+                        20210716 수정
+                        <div class="safe-flex-wrap">
+                            <p class="my-gold-value-info info-msg">숫자만 입력 가능합니다.</p>
+                            <em class="tit my-gold-conversion align-r mt12">1돈 = 3.75g</em>
+                        </div>
+                        -->
+                    </div>
+                </section>
+                <section class="kb-sec mt24">
+                    <label for="mysafe_04" class="tit gold-trans-titlte empty-gold-unit-info mt24">*환산금액</label>
+                    <div class="button-area safe-flex100">
+                        <button class="btn-line my-gold-value"><span>조회</span></button>
+                    </div>
+                    <p class="my-gold-trans-info info-msg safe-display-none">보유중량 입력 후 조회 버튼을 누르시면 환산금액이 조회됩니다.</p>
+                    <div class="kb-form not-ready no-transition gold-input-value safe-flex100 mt12" data-status="info">
+                        <!-- <label for="mysafe_04">금액</label> -->
+                        <div class="kb-form_inner form-text">
+                            <input type="text" inputmode="numeric" class="gold-value-input" id="mysafe_04" placeholder="" value="10000000" data-unit="" data-action="autoSeperator" readonly=""><span class="unit" style="left: 75.7031px;">원</span>
+                        </div>
+                        <em class="validation">
+                            환산금액은 매매기준율을 적용하기 때문에 실제 매매시 가격과 다를 수 있습니다.<br>
+                            (1g = 1,000원 / 2021.04.27 14:44:35 2회차 기준율)
+                        </em>
+                    </div>
+                </section>
+                <section class="kb-sec mt28">
+                    <div class="kb-form not-ready no-transition gold-shape-form safe-flex100 mt28" data-status="">
+                        <label for="mysafe_06" class="gold-unit-title required">형태</label>
+                        <div class="kb-form_inner form-select mt4">
+                            <button type="button" class="selected-option" data-call-layered="MYS_AS_17_01_08_BS1" id="mysafe_05"></button>
+                            <select name="" id="mysafe_06" title="금 형태선택">
+                                <option value="">선택하세요</option>
+                                <option value="goldShape01">골드바</option>
+                                <option value="goldShape02">돌반지</option>
+                                <option value="goldShape03">악세서리</option>
+                                <option value="goldShape04" selected>직접 입력</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="kb-form not-ready no-transition gold-input-shape safe-flex100">
+                        <!-- <label for="goldUnitInput"></label> -->
+                        <div class="kb-form_inner form-text">
+                            <input type="text" class="gold-shape-input" id="mysafe_07" onkeydown="all_on_fun()" placeholder="최대 10자를 입력해주세요." value="결혼반지" maxlength="10">
+                            <button class="btn-data-clear gold-shape-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="kb-sec mt28">
+                    <div class="kb-form not-ready no-transition gold-input-memo safe-flex100">
+                        <label for="goldUnitInput">메모</label>
+                        <div class="kb-form_inner form-text">
+                            <input type="text" class="gold-memo-input" id="mysafe_08" placeholder="최대 10자를 입력해주세요." value="행복한 기억" maxlength="10">
+                            <button class="btn-data-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="kb-sec sticky-bottom">
+                    <div class="btn-area">
+                        <button class="btn-solid_sticky lv2"><span>삭제</span></button>
+                        <button class="btn-solid_sticky my-gold-enrollment"><span>저장</span></button>
+                    </div>
+                </section>
+
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <!-- [MYS_AS_17_01_08_BS2] 금 단위선택(바텀시트) (작성자: 유플리트 이현섭)// -->
+            <!-- 금 단위선택(바텀시트)// -->
+            <div class="bottom-sheet full-size" data-layered-name="MYS_AS_17_01_08_BS2">
+                <div class="bottom-sheet_header">
+                    <span class="tit">단위</span>
+                </div>
+                <div class="bottom-sheet_contents bottom-prod-info coffer-line">
+                    <ul class="bottom-sheet_select">
+                        <li>
+                            <button type="button" class="goldUnit goldUnit01" data-value="goldUnit01" data-action="select">
+                                그램
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="goldUnit goldUnit02" data-value="goldUnit02" data-action="select">
+                                돈
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-sheet_buttons mysafe-btn-close">
+                    <button class="btn-solid_sticky" data-action="close"><span>닫기</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //금 단위선택(바텀시트)  -->
+
+            <!-- [MYS_AS_17_01_08_BS1] 금 형태선택(바텀시트) (작성자: 유플리트 이현섭)// -->
+            <!-- 금 형태선택(바텀시트)// -->
+            <div class="bottom-sheet full-size" data-layered-name="MYS_AS_17_01_08_BS1">
+                <div class="bottom-sheet_header">
+                    <span class="tit">형태</span>
+                </div>
+                <div class="bottom-sheet_contents bottom-prod-info coffer-line">
+                    <ul class="bottom-sheet_select">
+                        <li>
+                            <button type="button" class="goldShape goldShape01" data-value="goldShape01" data-action="select">
+                                골드바
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="goldShape goldShape02" data-value="goldShape02" data-action="select">
+                                돌반지
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="goldShape goldShape03" data-value="goldShape03" data-action="select">
+                                악세서리
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="goldShape goldShape04" data-value="goldShape04" data-action="select">
+                                직접 입력
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-sheet_buttons mysafe-btn-close">
+                    <button class="btn-solid_sticky" data-action="close"><span>닫기</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //금 형태선택(바텀시트)  -->
+
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+    <script>
+        var set_data; //입력 받은 input의 부모의 부모 영역에서 제목을 찾는 용도.
+        var gold_input_num;
+        var get_data_status; //data-status 값을 가져오거나 편집하기 위한 용도.
+        var gold_shape_input; //금형태 직접 입력 시 공백여부 확인 및 값 확인용.
+        var currentVal = 0; //값초기화
+        var bu_num = 1; //금단위 바텀시트 선택 여부 확인용.
+        var gs_num = 1; //금형태 바텀시트 선택 여부 확인용.
+        var gsi = 1; //직접 입력 여부 확인용.
+        var mgv = 1; //조회버튼 클릭 여부 확인용.
+        var $gold_unit_input = $('.gold-unit-input'); //.gold-unit-input 선호출용.
+        var $safe_flex_wrap = $('.safe-flex-wrap'); //.safe-flex-wrap 선호출용.
+        var $my_gold_value = $('.my-gold-value'); //.my-gold-value 선호출용.
+        var $my_gold_enrollment = $('.my-gold-enrollment'); //.my-gold-enrollment 선호출용.
+        /*-----input에 대한 바른 데이터 입력, 활성 및 비활성, 틀린 데이터 입력에 대한
+               동작 예시 함수로 본격적인 검증식 및 계산식은 프로그램밍이 필요함.-------*/
+
+        function change_check() { //금 보유 항목의 단위입력창의 숫자,에러,공백 검증.
+            var objEv = event.srcElement;
+            var pattern_0 = /([^0-9^.])/;
+            var pattern = objEv.value.match(pattern_0);
+            var $this = objEv.value;
+            set_data = objEv.parentNode.parentNode;
+            if ($this !== '') {
+                if (pattern != null) {
+                    $safe_flex_wrap.find('p').removeClass('info-msg');
+                    $safe_flex_wrap.find('p').removeClass('success-msg');
+                    $safe_flex_wrap.find('p').addClass('error-msg');
+                    $safe_flex_wrap.find('p').css({
+                        'opacity': '0'
+                    });
+                    $safe_flex_wrap.find('p').html('숫자만 입력 가능합니다.');
+                    set_data.setAttribute('data-status', 'error');
+                    objEv.value = "";
+                } else {
+                    $safe_flex_wrap.find('p').removeClass('error-msg');
+                    $safe_flex_wrap.find('p').removeClass('info-msg');
+                    $safe_flex_wrap.find('p').addClass('success-msg');
+                    $safe_flex_wrap.find('p').css({
+                        'opacity': '0'
+                    });
+                    $safe_flex_wrap.find('p').html('등록 가능합니다.');
+                    set_data.setAttribute('data-status', 'success');
+                }
+            } else {
+                $safe_flex_wrap.find('p').removeClass('error-msg');
+                $safe_flex_wrap.find('p').removeClass('success-msg');
+                $safe_flex_wrap.find('p').addClass('info-msg');
+                $safe_flex_wrap.find('p').css({
+                    'opacity': '0'
+                });
+                $safe_flex_wrap.find('p').html('숫자만 입력 가능합니다.');
+                set_data.setAttribute('data-status', 'info');
+            }
+            get_data_status = set_data.getAttribute('data-status');
+            safe_btn_on();
+            all_on_fun();
+        };
+
+        function safe_btn_on() { //보유 항목의 단위입력 완료시 조회버튼 및 그 제목 활성화.
+            if ((bu_num > 0) && (get_data_status == 'success')) {
+                $my_gold_value.removeAttr('disabled');
+                // $('.gold-trans-titlte').removeClass('empty-gold-unit-info');
+            } else {
+                $my_gold_value.attr('disabled', 'disabled');
+                // $('.gold-trans-titlte').addClass('empty-gold-unit-info');
+            }
+        };
+
+        function value_trans_ok() { //조회버튼 클릭 시 조회버튼 하단의 경고문구가 입력창(가격-readonly)으로 변경 됨.
+            $('.my-gold-trans-info').addClass('safe-display-none');
+            $('.gold-input-value').removeClass('safe-display-none');
+        };
+
+        function value_trans_cancle() { //value_trans_ok() 함수의 반대 동작.
+            $('.my-gold-trans-info').removeClass('safe-display-none');
+            $('.gold-input-value').addClass('safe-display-none');
+        };
+
+        function all_on_fun() { //최종 등록 버튼 활성화 함수-금보유 항목의 단위입력 완료/조회버튼 클릭/금형태 선택이 선결 되면 활성화.
+            gold_shape_input = document.getElementById('mysafe_07').value;
+            if (gold_shape_input !== '') {
+                gsi = 1;
+            } else {
+                gsi = 0;
+            }
+            if (((bu_num > 0) && (get_data_status == 'success')) && ((gs_num == 1 && gsi > 0) || (gs_num > 1)) && (mgv > 0)) {
+                $my_gold_enrollment.removeAttr('disabled');
+            } else {
+                $my_gold_enrollment.removeAttr('disabled');
+                $my_gold_enrollment.attr('disabled', 'disabled');
+            }
+        };
+        $gold_unit_input.on('propertychange change keyup paste input', function(event) { //금단위 입력시 변화 된 값 인식.
+            currentVal = $gold_unit_input.val();
+            var oldVal;
+            if (currentVal == oldVal) {
+                return;
+            }
+            oldVal = currentVal;
+            change_check();
+        });
+        $('.gold-unit-clear').on('click', function() { //보유 항목의 단위입력 삭제 버튼으로 클릭 시 관련된 기능들 리셋.
+            $safe_flex_wrap.find('p').removeClass('error-msg');
+            $safe_flex_wrap.find('p').removeClass('success-msg');
+            $safe_flex_wrap.find('p').addClass('info-msg');
+            $safe_flex_wrap.find('p').css({
+                'opacity': '1'
+            });
+            $safe_flex_wrap.find('p').html('숫자만 입력 가능합니다.');
+            this.parentNode.parentNode.setAttribute('data-status', 'info');
+            $my_gold_value.attr('disabled', 'disabled');
+            // $('.gold-trans-titlte').addClass('empty-gold-unit-info');
+            $my_gold_enrollment.removeAttr('disabled');
+            $my_gold_enrollment.attr('disabled', 'disabled');
+        });
+        // $('input[type=text]').focusin(function(){//입력창에 포커스인하면 제목이 검은색으로 활성화.
+        //     if (($('input[type=text]').val() !== '')){
+        //         $(this).parent().parent().prev('.tit').removeClass('empty-gold-unit-info');
+        //         $(this).parent().parent().prev('.tit').prev('.tit').removeClass('empty-gold-unit-info');
+        //     }
+        //     $(this).parent().parent().prev('.tit').removeClass('empty-gold-unit-info');
+        //     $(this).parent().parent().prev('.tit').prev('.tit').removeClass('empty-gold-unit-info');
+        // });
+        // $('input[type=text]').focusout(function(){//입력창에 포커스아웃하면 제목이 회색으로 비활성화.
+        //     if(($('input[type=text]').val() !== '')){
+        //         $(this).parent().parent().prev('.tit').addClass('empty-gold-unit-info');
+        //         $(this).parent().parent().prev('.tit').prev('.tit').addClass('empty-gold-unit-info');
+        //     }
+        //     $(this).parent().parent().prev('.tit').addClass('empty-gold-unit-info');
+        //     $(this).parent().parent().prev('.tit').prev('.tit').addClass('empty-gold-unit-info');
+        // });
+        $('.goldUnit').on('click', function() { //금 단위선택 바텀시트 선택 시 동작부분.
+            if ($(this).is('.goldUnit01')) {
+                // $('.gold-conversion-titlte').removeClass('safe-display-none');
+                // $('.my-gold-done').addClass('safe-display-none');
+                //20210719 수정.
+                $('.safe-relative-flex').children('strong.tit').text('보유(gram)');
+                bu_num = 1;
+            } else if ($(this).is('.goldUnit02')) {
+                // $('.gold-conversion-titlte').removeClass('safe-display-none');
+                // $('.my-gold-gram').addClass('safe-display-none');
+                //20210719 수정.
+                $('.safe-relative-flex').children('strong.tit').text('보유(돈)');
+                bu_num = 2;
+            }
+            safe_btn_on();
+            all_on_fun();
+        });
+        $('.goldShape').on('click', function() { //금 형태선택 바텀시트 선택 시 동작부분.
+            document.getElementById('mysafe_07').value = '';
+            if ($(this).is('.goldShape04')) {
+                $('.gold-input-shape').removeClass('safe-display-none');
+                gs_num = 1;
+            } else {
+                $('.gold-input-shape').removeClass('safe-display-none');
+                $('.gold-input-shape').addClass('safe-display-none');
+                gs_num = 2;
+            }
+            all_on_fun();
+        });
+        $('.gold-shape-clear').on('click', function() { //금 형태 직접입력 삭제 버튼으로 클릭 시 관련된 기능들 리셋.
+            gsi = 0;
+            $my_gold_enrollment.removeAttr('disabled');
+            $my_gold_enrollment.attr('disabled', 'disabled');
+        });
+        $my_gold_value.on('click', function() { //조회버튼 클릭시 숨어 있던 가격 부분이 노출 되는 함수의 트리거.
+            if ((bu_num > 0) && (get_data_status == 'success')) {
+                value_trans_ok();
+                mgv = 1;
+            } else {
+                // value_trans_cancle();
+                mgv = 0;
+            }
+            all_on_fun();
+        });
+        /*--------------------------------------------------------------------*/
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!-- [MYS_MN_06_01_01] 전체메뉴 > >마이데이터 선물함 > 친구추천 (작성자: 누리어 시스템 이진우)// -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Last Depth | 1st Depth | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- 수정 2021.06.25 : Liiv, Starbanking  앱 안에서  동작할 경우 data-page="submain" -->
+        <!-- 수정 : app-header (Type 구분) //-->
+        <!-- app-header [s] -->
+        <!-- data-type 
+    타이틀이 없을 경우 빈값(<strong class="page-tit"></strong>) - 마크업은 반드시 존재해야함
+    '' : 뒤로가기 + 타이틀 + 전체메뉴
+    'close': 타이틀 + 닫기버튼만
+    'title' : 타이틀만
+    'back' : 타이틀 + back버튼만
+    'notice' : 알림 + 타이틀 + 전체메뉴    
+-->
+        <header class="app-header" data-type="">
+            <a href="javascript:;" class="btn-notice-box" role="button"><i class="icon-bell2_24">알림함으로 이동</i></a>
+            <a href="javascript:history.back();" class="btn-history-back" role="button"><i class="icon-back">뒤로가기</i></a>
+            <strong class="page-tit">마이데이터 선물함</strong>
+            <button type="button" class="btn-allmenu"><i class="icon-menu">전체메뉴</i></button>
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <div class="app-menu">
+            <!-- 수정 : 2021.06.24  // -->
+            <div class="all-menu-top">
+                <div class="util-menu">
+                    <a href="javascript:;" class="" role="button"><i class="icon-setting_24">설정</i></a>
+                    <a href="javascript:;" class="all-menu-notice new" role="button"><i class="icon-bell_24">알림</i></a><!-- 새로운 알림이 있을 때 .new -->
+                    <button type="button" class="btn-close"><span>닫기</span></button>
+                </div>
+                <div class="user-name"><a href="javascript:;"><strong>김국민</strong>님<i class="icon-move"></i></a></div>
+            </div>
+            <ul class="major-menu">
+                <li><a href="javascript:;"><span><i class="icon-mn_asset"></i></span><strong>자산등록</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_report"></i></span><strong>소비리포트</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_notice"></i></span><strong>공지사항</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_mydata"></i></span><strong>선물함</strong></a></li>
+            </ul>
+            <!--  // 수정 : 2021.06.24 -->
+            <div class="all-menu-list-wrap">
+                <div class="manage-mydata">
+                    <strong class="tit">마이데이터 관리</strong>
+                    <a href="javascript:;"><span>70</span><i class="icon-move"></i></a>
+                </div>
+                <!-- 수정 : 2021.06.24 메뉴 순서 변경 // -->
+                <ul class="all-menu-list">
+                    <li class="is-active">
+                        <a href="javascript:;">자산</a>
+                        <ul>
+                            <li><a href="javascript:;">자산통합조회</a></li>
+                            <li><a href="javascript:;">입출금&middot;페이</a></li>
+                            <li><a href="javascript:;">예적금</a></li>
+                            <li><a href="javascript:;">투자</a></li>
+                            <li><a href="javascript:;">보험</a></li>
+                            <li><a href="javascript:;">대출&middot;부채</a></li>
+                            <li><a href="javascript:;">부동산</a></li>
+                            <li><a href="javascript:;">자동차</a></li>
+                            <li><a href="javascript:;">My 금고</a></li>
+                            <li><a href="javascript:;">외화</a></li>
+                            <li><a href="javascript:;">적립포인트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지출</a>
+                        <ul>
+                            <li><a href="javascript:;">가계부</a></li>
+                            <li><a href="javascript:;">정기지출</a></li>
+                            <li><a href="javascript:;">카드관리</a></li>
+                            <li><a href="javascript:;">소비리포트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">목표 챌린지</a>
+                        <ul>
+                            <li><a href="javascript:;">아낀만큼</a></li>
+                            <li><a href="javascript:;">쓰는만큼</a></li>
+                            <li><a href="javascript:;">남들만큼</a></li>
+                            <li><a href="javascript:;">저금통</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">제휴/특화</a>
+                        <ul>
+                            <li><a href="javascript:;">신용</a></li>
+                            <li><a href="javascript:;">My Fun Data</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">슬그Money</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">D플랜</a>
+                        <ul>
+                            <li><a href="javascript:;">월수령액</a></li>
+                            <li><a href="javascript:;">라이프이벤트</a></li>
+                            <li><a href="javascript:;">나의기록</a></li>
+                            <li><a href="javascript:;">D플랜 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객센터</a>
+                        <ul>
+                            <li><a href="javascript:;">FAQ</a></li>
+                            <li><a href="javascript:;">전화상담</a></li>
+                            <li><a href="javascript:;">약관 및 정책</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">마이페이지</a>
+                        <ul>
+                            <li><a href="javascript:;">마이데이터 관리</a></li>
+                            <li><a href="javascript:;">내정보</a></li>
+                            <li><a href="javascript:;">마이데이터 선물함</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2021.06.24 메뉴 순서 변경 -->
+            </div>
+        </div>
+
+        <!-- // 수정 : app-header (Type 구분)-->
+        <!-- app-container (for MyMoney) //-->
+        <div class="app-container">
+            <div class="app-lnb">
+                <div class="tab swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="javscript:;">선물</a></li><!-- 수정 : 2021.06.25 -->
+                        <li class="swiper-slide"><a href="javscript:;">실시간 이벤트</a></li><!-- 수정 : 2021.06.25 -->
+                        <li class="swiper-slide is-active"><a href="javscript:;">친구추천</a></li><!-- 수정 : 2021.06.25 -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- app-content // -->
+            <main class="app-content recommend-to-friend">
+                <section class="kb-sec bg-white">
+                    <!-- 수정 : 2021.06.25 -->
+                    <div class="tab_button">
+                        <a href="javascript:;" class="is-active"><span>친구추천</span></a>
+                        <a href="javascript:;"><span>추천이력</span></a>
+                    </div>
+                </section>
+
+                <section class="kb-sec">
+                    <div class="rtf-code">추천인 코드 : <b>KBstar1</b></div>
+                    <div class="event-img"><img src="" alt="이벤트 이미지"></div>
+                    <!-- 수정 : 2021.06.23 // -->
+                    <div class="sns-group">
+                        <button><i class="icon-kakao">KAKAO</i></button>
+                        <button><i class="icon-fb">FACEBOOK</i></button>
+                        <button><i class="icon-twitter">TWITTER</i></button>
+                        <button><i class="icon-band">BAND</i></button>
+                        <button><i class="icon-sms">SMS</i></button>
+                    </div>
+                    <!-- // 수정 : 2021.06.23 -->
+
+                    <ul class="rtf-detail">
+                        <li>
+                            <h3 class="tit">기간</h3>
+                            <div><span class="num">2021.05.07</span>(목) ~ <span class="num">05.20</span>(수)</div>
+                        </li>
+                        <li>
+                            <h3 class="tit">대상</h3>
+                            <div>Liiv mate 모든 회원</div>
+                        </li>
+                        <li>
+                            <h3 class="tit">내용</h3>
+                            <div>
+                                <p>우리 자산 푸르게! 푸르게! 회원님들의 자산살림청 리브메이트가 여러분의 자산을 더욱 잘 가꿔드리기 위해 “자산연동 동의등록” 이벤트를 진행합니다.</p>
+                                <p class="c-red">500포인트리도 받고 리브메이트의 자산살림 서비스도 이용해 보세요!</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="tit">참여방법</h3>
+                            <div>
+                                행사 기간 동안 아래 버튼을 통해 자산연동하면, <br>
+                                500 포인트리 제공<br>
+                                (이벤트 기간 내 최초 등록 1회만 제공)
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul data-style="list">
+                        <li>본 행사는 Liiv Mate의 영업정책 및 제휴업체 사정으로 변경 또는 중단될 수 있습니다.</li>
+                        <li>문의 : Liiv Mate 고객센터(<span class="num">1644-9311</span>)</li>
+                        <li>준법감시인 심의필 제 <span class="num">201231-04358-</span>HMW(<span class="num">2020.12.31 ~ 2021.06.30</span>)</li>
+                    </ul>
+                </section>
+
+            </main>
+            <!-- // app-content -->
+
+            <!-- // app-container -->
+        </div>
+
+        <div class="layered">
+
+            <!-- [MYS_MN_01_01_03] 전체메뉴 > My Data 관리 > 다른기관관리(탈퇴 팝업) (작성자: 누리어 시스템 이진우)// -->
+            <!-- 탈퇴 팝업 //-->
+            <div class="modal" data-layered-name="MYS_MN_01_02_03" id="MYS_MN_01_02_03">
+                <div class="modal_header">
+                    <strong class="tit">마이데이터 서비스 탈퇴</strong>
+                </div>
+                <div class="modal_contents">
+                    <ul data-style="list">
+                        <li>
+                            마이데이터 회원 탈퇴 시 데이터 분석에 기반한 맞춤형 자산관리 서비스 등 KB국민은행에서 제공되는 다양한 마이데이터 서비스 모두를 이용하실 수 없으며, 재동의 하시더라도 삭제된 과거 데이터는 복구되지 않습니다.
+                        </li>
+                    </ul>
+                    <p class="mt16">KB국민은행 마이데이터 서비스 회원 탈퇴 하시겠습니까?</p>
+                </div>
+                <div class="modal_buttons btn-area">
+                    <button class="btn-solid_sticky lv2 cancel" data-action="close"><span>취소</span></button>
+                    <button class="btn-solid_sticky ok" data-action="close"><span>확인</span></button>
+                </div>
+            </div>
+            <!-- /탈퇴 팝업 -->
+
+        </div>
+
+        <!-- Script -->
+        <!-- Common Library -->
+        <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+        <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+        <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+        <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+        <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+        <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+        <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+        <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+        <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+        <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+        <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+        <!-- Add Library (this page only)-->
+        <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+        <!-- Add Script -->
+        <script>
+            gfn_gnb.select(10, 2); //수정 2021.06.25 : liiv, starbanking  용
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+
+    <link rel="stylesheet" href="./resources/guide.css?cbh=cf5b1e91c03254b82830e3e4df272acb">
+    <link rel="stylesheet" href="./resources/jquery-ui.css?cbh=c4a88ec0cb998929a670c0c58d7dc526">
+    <link rel="stylesheet" href="./resources/a11y-dark.min.css?cbh=266858b943cb8f77484b523ef9b56c37">
+    <script src="./resources/highlight.min.js?cbh=35551512ec6dd09954e611e3468f2b56"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</head>
+
+<body class="guide">
+    <div class="guide-header">
+        <h1><a href="./index.html">GUIDE</a></h1>
+        <ul class="gnb">
+            <li><a href="./atom.html">Atom</a></li>
+            <li><a href="./molecule.html">Molecule</a></li>
+            <li><a href="./organism.html">Organism</a></li>
+            <li class="is-active"><a href="./template.html">Template</a></li>
+            <li><a href="./highcharts-sample.html">Highcharts</a></li>
+        </ul>
+    </div>
+    <div class="guide-container">
+        <!-- SECTION 구분 -->
+        <div class="box">
+            <h2>SECTION 구분</h2>
+            <dl class="flex-dl">
+                <dt>
+                    <pre>
+                        <code>
+
+                        </code>
+                    </pre>
+                </dt>
+                <dd class="guide-description">
+                    <p>.app-content 아래 section<span class="c-blue">.kb-sec 으로 컨텐츠를 구분</span> <span class="c-red"><u>().kb-sec 을 div 등으로 감싸면 안됨)</u></span></p>
+
+                    <p>회색 배경이 있는 경우 .kb-sec<span class="c-blue">.bg-gray</span>를 추가</p>
+                    <p>.kb-sec.bg-gray:first-child 의 배경은 상단 40px부터 시작됨(추후 일괄수정될수 있음)</p>
+                    <p>.kb-sec.bg-gray 사용할 경우 여백은 padding을 사용하여야함 (margin을 사용할 경우 body 배경색이 나옴)</p>
+                </dd>
+                <dd class="no-space" data-description=".kb-sec">
+                    <div class="app-content">
+                        <section class="kb-sec" style="background-color:bisque;">
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                        </section>
+                        <section class="kb-sec full" style="background-color:burlywood;">
+                            <div class="">
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                            </div>
+                        </section>
+                    </div>
+                </dd>
+                <dd class="no-space" data-description=".kb-sec.bg-gray">
+                    <div class="app-content">
+                        <section class="kb-sec bg-gray" style="padding-bottom:20px">
+                            <!-- 임시 스타일 -->
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                            1st content<br>
+                        </section>
+                        <section class="kb-sec bg-gray">
+                            2nd content<br>
+                            2nd content<br>
+                            2nd content<br>
+                            2nd content<br>
+                            2nd content<br>
+                            2nd content<br>
+                            2nd content<br>
+                        </section>
+                    </div>
+                </dd>
+                <dd class="no-space" data-description=".content-box">
+                    <div class="app-content">
+                        <section class="kb-sec bg-gray" style="padding-bottom:20px">
+                            <!-- 임시 스타일 -->
+                            <div class="content-box">
+                                1st content<br>
+                                1st content<br>
+                                1st content<br>
+                                1st content<br>
+                                1st content<br>
+                                1st content<br>
+                                1st content<br>
+                            </div>
+                        </section>
+                        <section class="kb-sec bg-gray">
+                            <div class="content-box shadow">
+                                <!-- 배경 shadow 추가-->
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                                2nd content<br>
+                            </div>
+                        </section>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <hr>
+        <div class="box">
+            <h2 class="h2">약관 등 문서</h2>
+            <div class="table mt8">
+                <table class="tbl-t01">
+                    <caption></caption>
+                    <colgroup>
+                        <col style="width:25%">
+                        <col style="width:35%">
+                        <col style="width:25%">
+                        <col style="width:auto">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>내용</th>
+                            <th>File Name</th>
+                            <th>호출페이지</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>고유식별정보 처리 동의</td>
+                            <td><a href="/html/terms/agree-unique-id-info.html" target="_blank">/html/terms/agree-unique-id-info.html</a></td>
+                            <td>
+                                MYS_CO_04_04_03_01<br>
+                                MYS_SP_01_01_01_P1
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>통신사 이용약관 동의</td>
+                            <td><a href="/html/terms/agree-terms-of-use-of-telecommunications-company.html" target="_blank">/html/terms/agree-terms-of-use-of-telecommunications-company.html</a></td>
+                            <td>
+                                MYS_CO_04_04_03_01<br>
+                                MYS_SP_01_01_01_P1
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>휴대폰본인확인 개인정보 수집이용동의</td>
+                            <td><a href="/html/terms/agree-mobile-id-personal-info-collection.html" target="_blank">/html/terms/agree-mobile-id-personal-info-collection.html</a></td>
+                            <td>
+                                MYS_CO_04_04_03_01<br>
+                                MYS_SP_01_01_01_P1
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>휴대폰본인확인 서비스 이용약관 동의</td>
+                            <td><a href="/html/terms/agree-mobile-id-personal-info-service.html" target="_blank">/html/terms/agree-mobile-id-personal-info-service.html</a></td>
+                            <td>
+                                MYS_CO_04_04_03_01<br>
+                                MYS_SP_01_01_01_P1
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>KB마이머니서비스 설명서</td>
+                            <td><a href="/html/terms/my-money-manual.html">/html/terms/my-money-manual.html</a></td>
+                            <td>
+                                MYS_CO_05_02_01<br>
+                                MYS_MN_03_03_01_01
+                            </td>
+                            <td>PDF</td>
+                        </tr>
+                        <tr>
+                            <td>KB마이머니서비스 이용약관</td>
+                            <td><a href="/html/terms/my-money-term.html">/html/terms/my-money-term.html</a></td>
+                            <td>
+                                MYS_CO_05_02_01<br>
+                                MYS_MN_03_03_01_01
+                            </td>
+                            <td>PDF</td>
+                        </tr>
+                        <tr>
+                            <td>개인(신용)정보 수집&middot;이용 동의</td>
+                            <td><a href="/html/terms/agree-collection-use-personal-info02.html">/html/terms/agree-collection-use-personal-info02.html</a></td>
+                            <td>
+                                MYS_CO_05_02_01<br>
+                                MYS_MN_03_03_01_01
+                            </td>
+                            <td>PDF</td>
+                        </tr>
+                        <tr>
+                            <td>개인(신용)정보 제공 동의</td>
+                            <td><a href="/html/terms/agree-use-personal-info.html">/html/terms/agree-use-personal-info.html</a></td>
+                            <td>MYS_CO_05_02_01</td>
+                            <td>PDF</td>
+                        </tr>
+                        <tr>
+                            <td>개인(신용)정보 수집&middot;이용&middot;제공동의서 (신용관리서비스용)</td>
+                            <td><a href="/html/special/mys_sp_01_01_00_p2.html">/html/special/mys_sp_01_01_00_p2.html</a></td>
+                            <td>
+                                MYS_MN_03_03_01_01<br>
+                                MYS_MN_03_03_01_01
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>신용관리서비스 이용약관</td>
+                            <td><a href="/html/special/mys_sp_01_01_00_p1.html">/html/special/mys_sp_01_01_00_p1.html</a></td>
+                            <td>
+                                MYS_SP_01_01_00<br>
+                                MYS_MN_03_03_01_01
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>NICE신용관리서비스 이용약관</td>
+                            <td><a href="/html/special/mys_sp_01_01_00_p3.html">/html/special/mys_sp_01_01_00_p3.html</a></td>
+                            <td>
+                                MYS_SP_01_01_00<br>
+                                MYS_MN_03_03_01_01
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>제3자 정보제공 동의</td>
+                            <td><a href="/html/terms/agree-provide-info.html" target="_blank">/html/terms/agree-provide-info.html</a></td>
+                            <td>MYS_CO_05_02_01</td>
+                            <td>PDF</td>
+                        </tr>
+                        <tr>
+                            <td>개인(신용)정보 수집&middot;이용 동의 (상품서비스 안내 등)</td>
+                            <td><a href="/html/terms/agree-collection-use-personal-info.html" target="_blank">/html/terms/agree-collection-use-personal-info.html</a></td>
+                            <td>MYS_CO_05_02_01</td>
+                            <td>PDF</td>
+                        </tr>
+                        <tr>
+                            <td>개인(신용)정보 수집&middot;이용&middot;제공동의서 (자동차관리서비스용)</td>
+                            <td><a href="/html/asset/mys_as_12_01_04_p2.html" target="_blank">/html/asset/mys_as_12_01_04_p2.html</a></td>
+                            <td>
+                                MYS_MN_03_03_01_01<br>
+                                MYS_AS_12_01_04_P1
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Push알림 수신동의</td>
+                            <td><a href="/html/terms/agree-push-notice.html" target="_blank">/html/terms/agree-push-notice.html</a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="./resources/guide.js?cbh=e93be94e353be51a3ed0e5916ca87942"></script>
+
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- [MYS_SP_01_01_00]
+		MY FUN DATA > 부자데이터 > 부자스토리텔링 > 시뮬레이션 > 시뷸레이션분석완료 > 마이데이터동의완료 > 부자데이터분석완료
+		(작성자: 누리어 시스템 김삼희) -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>부자 데이터 | MY FUN DATA | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- app-header (for MyMoney) //-->
+        <!-- app-header [s] -->
+        <!-- data-type 
+    타이틀이 없을 경우 빈값(<strong class="page-tit"></strong>) - 마크업은 반드시 존재해야함
+    '' : 뒤로가기 + 타이틀 + 전체메뉴
+    'close': 타이틀 + 닫기버튼만
+    'title' : 타이틀만
+    'back' : 타이틀 + back버튼만
+    'notice' : 알림 + 타이틀 + 전체메뉴    
+-->
+        <header class="app-header" data-type="">
+            <a href="javascript:;" class="btn-notice-box" role="button"><i class="icon-bell2_24">알림함으로 이동</i></a>
+            <a href="javascript:history.back();" class="btn-history-back" role="button"><i class="icon-back">뒤로가기</i></a>
+            <strong class="page-tit">어느 날 나에게 50억이 생긴다면?</strong>
+            <button type="button" class="btn-allmenu"><i class="icon-menu">전체메뉴</i></button>
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <div class="app-menu">
+            <!-- 수정 : 2021.06.24  // -->
+            <div class="all-menu-top">
+                <div class="util-menu">
+                    <a href="javascript:;" class="" role="button"><i class="icon-setting_24">설정</i></a>
+                    <a href="javascript:;" class="all-menu-notice new" role="button"><i class="icon-bell_24">알림</i></a><!-- 새로운 알림이 있을 때 .new -->
+                    <button type="button" class="btn-close"><span>닫기</span></button>
+                </div>
+                <div class="user-name"><a href="javascript:;"><strong>김국민</strong>님<i class="icon-move"></i></a></div>
+            </div>
+            <ul class="major-menu">
+                <li><a href="javascript:;"><span><i class="icon-mn_asset"></i></span><strong>자산등록</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_report"></i></span><strong>소비리포트</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_notice"></i></span><strong>공지사항</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_mydata"></i></span><strong>선물함</strong></a></li>
+            </ul>
+            <!--  // 수정 : 2021.06.24 -->
+            <div class="all-menu-list-wrap">
+                <div class="manage-mydata">
+                    <strong class="tit">마이데이터 관리</strong>
+                    <a href="javascript:;"><span>70</span><i class="icon-move"></i></a>
+                </div>
+                <!-- 수정 : 2021.06.24 메뉴 순서 변경 // -->
+                <ul class="all-menu-list">
+                    <li class="is-active">
+                        <a href="javascript:;">자산</a>
+                        <ul>
+                            <li><a href="javascript:;">자산통합조회</a></li>
+                            <li><a href="javascript:;">입출금&middot;페이</a></li>
+                            <li><a href="javascript:;">예적금</a></li>
+                            <li><a href="javascript:;">투자</a></li>
+                            <li><a href="javascript:;">보험</a></li>
+                            <li><a href="javascript:;">대출&middot;부채</a></li>
+                            <li><a href="javascript:;">부동산</a></li>
+                            <li><a href="javascript:;">자동차</a></li>
+                            <li><a href="javascript:;">My 금고</a></li>
+                            <li><a href="javascript:;">외화</a></li>
+                            <li><a href="javascript:;">적립포인트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지출</a>
+                        <ul>
+                            <li><a href="javascript:;">가계부</a></li>
+                            <li><a href="javascript:;">정기지출</a></li>
+                            <li><a href="javascript:;">카드관리</a></li>
+                            <li><a href="javascript:;">소비리포트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">목표 챌린지</a>
+                        <ul>
+                            <li><a href="javascript:;">아낀만큼</a></li>
+                            <li><a href="javascript:;">쓰는만큼</a></li>
+                            <li><a href="javascript:;">남들만큼</a></li>
+                            <li><a href="javascript:;">저금통</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">제휴/특화</a>
+                        <ul>
+                            <li><a href="javascript:;">신용</a></li>
+                            <li><a href="javascript:;">My Fun Data</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">슬그Money</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">D플랜</a>
+                        <ul>
+                            <li><a href="javascript:;">월수령액</a></li>
+                            <li><a href="javascript:;">라이프이벤트</a></li>
+                            <li><a href="javascript:;">나의기록</a></li>
+                            <li><a href="javascript:;">D플랜 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객센터</a>
+                        <ul>
+                            <li><a href="javascript:;">FAQ</a></li>
+                            <li><a href="javascript:;">전화상담</a></li>
+                            <li><a href="javascript:;">약관 및 정책</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">마이페이지</a>
+                        <ul>
+                            <li><a href="javascript:;">마이데이터 관리</a></li>
+                            <li><a href="javascript:;">내정보</a></li>
+                            <li><a href="javascript:;">마이데이터 선물함</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2021.06.24 메뉴 순서 변경 -->
+            </div>
+        </div>
+
+        <!-- // app-header -->
+
+        <!-- app-container (for MyMoney) //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content my-fun-data">
+
+                <!-- [D] 21-07-01 수정 : 문구 수정, 디자인 변경 현행화로 인한 마크업 수정 및 이미지 교체 //-->
+                <section class="kb-sec rich-comparison-graphs">
+                    <div class="chart-area content-box more-view-item">
+                        <!-- [Chart Area] // -->
+                        <!--
+									[차트 디자인 정보]
+									* 그래프(column) 색상(컬러별)
+									- 회색 : #c6cbd0;
+									- 민트 : #21d0c4;
+
+									X축 텍스트 컬러/크기 : #8c949e /14px
+									legend 텍스트 컬러/크기 : #26282c /14px
+								-->
+                        <img class="temp" src="../../static/images/_temp/chart_sp0203.png" alt="차트 예시 이미지">
+                    </div>
+                    <a href="../../html/asset/mys_as_00_00_00.html" role="button" class="btn-solid"><span>자산관리 바로가기</span></a>
+                    <button class="btn-line mt12" data-call-layered="mys_as_04_00_00_p1"><span>나의 자산 추가등록</span></button>
+                    <div class="summary-desc t01">고객님이 보유한 모든 자산을 등록하면 더 정확한 결과를 확인할 수 있습니다.</div>
+                </section>
+                <!-- // 부자vs나 비교 그래프 -->
+                <!-- 비교 데이터 상세 노출 // -->
+                <section class="kb-sec rich-finance-compare mt24">
+                    <div>
+                        <div class="comparison-list">
+                            <!-- [D] 21-06-30 수정 : 디자인 변경 현행화로 인한 마크업 수정 //-->
+                            <ul>
+                                <li>
+                                    <strong class="h4 data-tit"><i class="icon-myfundata-safebox"></i> 내 집안의 금고</strong>
+                                    <div class="data">
+                                        <p>
+                                            <span class="name">나</span>
+                                            <span class="amount percent"><em class="num">3.8%</em></span>
+                                            <span class="amount"><em class="num">1</em>억 <em class="num">6,500</em>만원</span>
+                                        </p>
+                                        <i class="unit">VS</i>
+                                        <p>
+                                            <span class="name">부자</span>
+                                            <span class="amount percent"><em class="num">1.2%</em></span>
+                                            <span class="amount"><em class="num">13</em>억 <em class="num">6,500</em>만원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="h4 data-tit"><i class="icon-myfundata-safebank"></i> 안전이 최고 은행</strong>
+                                    <div class="data">
+                                        <p>
+                                            <span class="name">나</span>
+                                            <span class="amount percent"><em class="num">3.8%</em></span>
+                                            <span class="amount"><em class="num">1</em>억</span>
+                                        </p>
+                                        <i class="unit">VS</i>
+                                        <p>
+                                            <span class="name">부자</span>
+                                            <span class="amount percent"><em class="num">1.2%</em></span>
+                                            <span class="amount"><em class="num">3</em>억 <em class="num">6,500</em>만원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="h4 data-tit"><i class="icon-myfundata-stock"></i> 일단 질러 주식(투자)</strong>
+                                    <div class="data">
+                                        <p>
+                                            <span class="name">나</span>
+                                            <span class="amount percent"><em class="num">3.8%</em></span>
+                                            <span class="amount"><em class="num">1</em>억</span>
+                                        </p>
+                                        <i class="unit">VS</i>
+                                        <p>
+                                            <span class="name">부자</span>
+                                            <span class="amount percent"><em class="num">1.2%</em></span>
+                                            <span class="amount"><em class="num">3</em>억 <em class="num">6,500</em>만원</span>
+                                        </p>
+                                    </div>
+                                <li>
+                                    <strong class="h4 data-tit"><i class="icon-myfundata-future"></i> 미래도 든든 보험&sol;연금</strong>
+                                    <div class="data">
+                                        <p>
+                                            <span class="name">나</span>
+                                            <span class="amount percent"><em class="num">3.8%</em></span>
+                                            <span class="amount"><em class="num">1</em>억</span>
+                                        </p>
+                                        <i class="unit">VS</i>
+                                        <p>
+                                            <span class="name">부자</span>
+                                            <span class="amount percent"><em class="num">1.2%</em></span>
+                                            <span class="amount"><em class="num">3</em>억 <em class="num">6,500</em>만원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="h4 data-tit"><i class="icon-myfundata-house"></i> 내 집 마련 부동산</strong><!-- [D] 21-07-02 수정 : 문구 변경 -->
+                                    <div class="data">
+                                        <p>
+                                            <span class="name">나</span>
+                                            <span class="amount percent"><em class="num">3.8%</em></span>
+                                            <span class="amount"><em class="num">1</em>억</span>
+                                        </p>
+                                        <i class="unit">VS</i>
+                                        <p>
+                                            <span class="name">부자</span>
+                                            <span class="amount percent"><em class="num">1.2%</em></span>
+                                            <span class="amount"><em class="num">3</em>억 <em class="num">6,500</em>만원</span>
+                                        </p>
+                                    </div>
+                                <li>
+                                    <strong class="h4 data-tit"><i class="icon-myfundata-culture"></i> 교양 뿜뿜 예술품&sol;기타금융</strong>
+                                    <div class="data">
+                                        <p>
+                                            <span class="name">나</span>
+                                            <span class="amount percent"><em class="num">3.8%</em></span>
+                                            <span class="amount"><em class="num">1</em>억</span>
+                                        </p>
+                                        <i class="unit">VS</i>
+                                        <p>
+                                            <span class="name">부자</span>
+                                            <span class="amount percent"><em class="num">1.2%</em></span>
+                                            <span class="amount"><em class="num">3</em>억 <em class="num">6,500</em>만원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--// [D] 21-06-30 수정 : 디자인 변경 현행화로 인한 마크업 수정 -->
+                            <p class="annotation" data-style="exclamation">위 시뮬레이션은 KB경영연구소 ‘2020 한국 부자보고서’를 바탕으로 분석한 결과입니다 .</p>
+                        </div>
+                    </div>
+                </section>
+                <!--// [D] 21-07-01 수정 : 문구 수정, 디자인 변경 현행화로 인한 마크업 수정 및 이미지 교체 -->
+
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <!-- [MYS_AS_04_00_00_P1] 자산등록(직접등록) (작성자: 누리어 시스템 김은경)// -->
+            <!-- 자산등록(직접등록)// -->
+            <!-- Bottom Sheet // -->
+            <div class="bottom-sheet full-size" data-layered-name="mys_as_04_00_00_p1">
+                <div class="bottom-sheet_header">
+                    <span class="tit">자산등록</span>
+                </div>
+                <div class="bottom-sheet_contents pop-my-asset">
+                    <!-- 바텀 시트 내용 -->
+                    <section class="kb-sec ">
+                        <p class="tit">관리하실 자산을 선택하여 <br>등록해주세요</p>
+                    </section>
+                    <section class="kb-sec register-box">
+                        <a href="#none" target="_blank" class="r-wrap">
+                            <i class="icon-reregister_24"></i>
+                            <div class="txt-con auto">
+                                <em>자산추가등록</em>
+                                <span>나의 금융자산 정보를 모바일/타사 사설인증서를 통해 손쉽게 등록 할 수 있어요</span>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="kb-sec register-box">
+                        <div class="r-wrap">
+                            <i class="icon-register_24"></i>
+                            <div class="txt-con self">
+                                <em>직접등록</em>
+                                <span>연동되지 않는 다양한 자산을 직접 등록해보세요!</span>
+                            </div>
+                        </div>
+                        <ul class="grid-list register-type" data-col="4">
+                            <!-- 2021-06-25 수정 // -->
+                            <li>
+                                <a href="../../html/asset/mys_as_04_01_00.html"><i class="icon-finace_24"></i><span>금융기관</span></a>
+                            </li>
+                            <li>
+                                <a href="../../html/asset/mys_as_04_02_00.html"><i class="icon-currency_24"></i><span>My금고</span></a>
+                            </li>
+                            <li>
+                                <a href="../../html/asset/mys_as_11_01_00.html"><i class="icon-estate_24"></i><span>부동산</span></a>
+                            </li>
+                            <li>
+                                <a href="../../html/asset/mys_as_12_01_00.html"><i class="icon-car_24"></i><span>자동차</span></a>
+                            </li>
+                            <!-- // 2021-06-25 수정 -->
+                        </ul>
+                    </section>
+                </div>
+
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //자산등록(직접등록)  -->
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+
+</body>
+
+</html>

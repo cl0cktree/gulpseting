@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- [MYS_AS_17_01_12_P1] 작성자: 유플리트 이현섭 -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자산 | My금고 | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- app-header (for MyMoney) //-->
+        <!-- app-header [s] -->
+        <header class="app-header">
+            <strong class="page-tit">기타자산</strong>
+            <!-- <button class="btn-close"><span>닫기</span></button> -->
+            <!-- 수정 : layer 팝업 -> 페이지로 전환용 -->
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <!-- // app-header (for MyMoney) -->
+
+        <!-- app-container //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content my-safe-pop-etc my-asset pop-my-asset">
+
+                <section class="kb-sec">
+                    <div class="pop-notice header">
+                        <span>
+                            <strong class="h4">
+                                소유하고 계신 의미있는 자산을 My 금고에 보관하세요!
+                            </strong>
+                        </span>
+                        <em class="mt4">* 표시된 항목은 필수 입력 사항입니다.</em>
+                    </div>
+                </section>
+                <section class="kb-sec etc-input-form mt28">
+                    <!-- <em class="tit etc-value-titlte empty-etc-unit-info mt28">*기타자산</em> -->
+                    <div class="kb-form not-ready no-transition etc-kind-form safe-flex100 mt28" data-status="">
+                        <label for="mysafe_10" class="etc-unit-title required">기타자산</label>
+                        <div class="kb-form_inner form-select mt4">
+                            <button type="button" class="selected-option" data-call-layered="MYS_AS_17_01_12_BS1" id="mysafe_09"></button>
+                            <select name="" id="mysafe_10" title="기타자산 선택">
+                                <option value="" selected>선택하세요</option>
+                                <option value="etcKind01">애장품</option>
+                                <option value="etcKind02">게임아이템</option>
+                                <option value="etcKind03">보석</option>
+                                <option value="etcKind04">자전거/오토바이</option>
+                                <option value="etcKind05">직접 입력</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="kb-form not-ready no-transition etc-input-kind safe-flex100 safe-display-none">
+                        <!-- <label for="mysafe_11"></label> -->
+                        <div class="kb-form_inner form-text">
+                            <input type="text" class="etc-kind-input" id="mysafe_11" onkeydown="all_on_fun()" placeholder="최대 10자를 입력해주세요." value="" maxlength="10">
+                            <button class="btn-data-clear etc-kind-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="kb-sec mt28">
+                    <!-- <em class="tit etc-trans-titlte empty-etc-unit-info">*금액</em> -->
+                    <div class="kb-form not-ready no-transition etc-input-value safe-flex100" data-status="info">
+                        <label for="mysafe_12" class="required">금액</label>
+                        <div class="kb-form_inner form-text">
+                            <input type="text" inputmode="numeric" class="etc-value-input" id="mysafe_12" placeholder="값을 입력 하세요." value="" data-unit="" data-action="autoSeperator"><span class="unit" style="left: 75.7031px;">원</span>
+                            <!-- <p class="my-etc-value-info info-msg">숫자만 입력 가능합니다.</p> -->
+                        </div>
+                </section>
+                <section class="kb-sec mt28">
+                    <!-- <em class="tit etc-memo-titlte empty-etc-unit-info">메모</em> -->
+                    <div class="kb-form not-ready no-transition etc-input-memo safe-flex100">
+                        <label for="mysafe_13">메모</label>
+                        <div class="kb-form_inner form-text">
+                            <input type="text" class="etc-memo-input" id="mysafe_13" placeholder="최대 10자를 입력해주세요." value="" maxlength="10">
+                            <button class="btn-data-clear"><i class="icon-data-clear_24">지우기</i></button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="kb-sec sticky-bottom">
+                    <div class="btn-area">
+                        <button class="btn-solid_sticky lv2"><span>취소</span></button>
+                        <button class="btn-solid_sticky my-etc-enrollment" disabled=""><span>등록</span></button>
+                    </div>
+                </section>
+
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <!-- [MYS_AS_17_01_12_BS1] 기타자산 종류(바텀시트) (작성자: 유플리트 이현섭)// -->
+            <!-- 기타자산 종류(바텀시트)// -->
+            <div class="bottom-sheet full-size" data-layered-name="MYS_AS_17_01_12_BS1">
+                <div class="bottom-sheet_header">
+                    <span class="tit">기타자산</span>
+                </div>
+                <div class="bottom-sheet_contents bottom-prod-info coffer-line">
+                    <ul class="bottom-sheet_select">
+                        <li>
+                            <button type="button" class="etcKind etcKind01" data-value="etcKind01" data-action="select">
+                                애장품
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="etcKind etcKind02" data-value="etcKind02" data-action="select">
+                                게임아이템
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="etcKind etcKind03" data-value="etcKind03" data-action="select">
+                                보석
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="etcKind etcKind04" data-value="etcKind04" data-action="select">
+                                자전거/오토바이
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="etcKind etcKind05" data-value="etcKind05" data-action="select">
+                                직접 입력
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-sheet_buttons mysafe-btn-close">
+                    <button class="btn-solid_sticky" data-action="close"><span>닫기</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //기타자산 종류(바텀시트)  -->
+
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+    <script>
+        var etc_kind_input; //기타자산 직접 입력 시 공백여부 확인 및 값 확인용.
+        var gs_num = 0; //기타자산 바텀시트 선택 여부 확인용.
+        var gsi = 0; //기타자산 직접 입력 여부 확인용.
+        var $my_etc_value_info = $('.my-etc-value-info'); //.my-etc-value-info 선호출용.
+        var $my_etc_value = $('.my-etc-value'); //.my-etc-value 선호출용.
+        var $my_etc_enrollment = $('.my-etc-enrollment'); //.my-etc-enrollment 선호출용.
+        var $etc_value_input = $('.etc-value-input');
+        var currentVal = 0;
+        /*-----input에 대한 바른 데이터 입력, 활성 및 비활성, 틀린 데이터 입력에 대한
+               동작 예시 함수로 본격적인 검증식 및 계산식은 프로그램밍이 필요함.-------*/
+        $('.etc-value-input').on('propertychange change keyup paste input', function(event) { //금액 입력시 변화 된 값 인식.
+            currentVal = $etc_value_input.val();
+            var oldVal;
+            if (currentVal == oldVal) {
+                return;
+            }
+            oldVal = currentVal;
+            all_on_fun();
+        });
+
+        function all_on_fun() { //최종 등록 버튼 활성화 함수-기타자산 직접입력 완료/기타자산 선택이 선결/기타자산 금액이 입력 되면 활성화.
+            etc_kind_input = document.getElementById('mysafe_11').value;
+            if (etc_kind_input !== '') {
+                gsi = 1;
+            } else {
+                gsi = 0;
+            }
+            // console.log('out - '+currentVal);
+            if ((currentVal !== '') && (currentVal !== 'undefined') && (currentVal !== null) && (currentVal !== 0) && ((gs_num == 1 && gsi > 0) || (gs_num > 1))) {
+                $my_etc_enrollment.removeAttr('disabled');
+                // console.log('t - '+currentVal);
+            } else {
+                $my_etc_enrollment.removeAttr('disabled');
+                $my_etc_enrollment.attr('disabled', 'disabled');
+                // console.log('f - '+currentVal);
+            }
+        };
+        // $('input[type=text]').focusin(function(){//입력창에 포커스인하면 제목이 검은색으로 활성화.
+        //     if (($('input[type=text]').val() !== '')){
+        //         $(this).parent().parent().prev('.tit').removeClass('empty-etc-unit-info');
+        //         $(this).parent().parent().prev('.tit').prev('.tit').removeClass('empty-etc-unit-info');
+        //     }
+        //     $(this).parent().parent().prev('.tit').removeClass('empty-etc-unit-info');
+        //     $(this).parent().parent().prev('.tit').prev('.tit').removeClass('empty-etc-unit-info');
+        // });
+        // $('input[type=text]').focusout(function(){//입력창에 포커스아웃하면 제목이 회색으로 비활성화.
+        //     if(($('input[type=text]').val() !== '')){
+        //         $(this).parent().parent().prev('.tit').addClass('empty-etc-unit-info');
+        //         $(this).parent().parent().prev('.tit').prev('.tit').addClass('empty-etc-unit-info');
+        //     }
+        //     $(this).parent().parent().prev('.tit').addClass('empty-etc-unit-info');
+        //     $(this).parent().parent().prev('.tit').prev('.tit').addClass('empty-etc-unit-info');
+        // });
+        $('.etcKind').on('click', function() { //기타자산 형태선택 바텀시트 선택 시 동작부분.
+            document.getElementById('mysafe_11').value = '';
+            if ($(this).is('.etcKind05')) {
+                $('.etc-input-kind').removeClass('safe-display-none');
+                gs_num = 1;
+            } else {
+                $('.etc-input-kind').removeClass('safe-display-none');
+                $('.etc-input-kind').addClass('safe-display-none');
+                gs_num = 2;
+            }
+            all_on_fun();
+        });
+        $('.etc-kind-clear').on('click', function() { //기타자산 직접입력 삭제 버튼으로 클릭 시 관련된 기능들 리셋.
+            gsi = 0;
+            $my_etc_enrollment.removeAttr('disabled');
+            $my_etc_enrollment.attr('disabled', 'disabled');
+        });
+        /*--------------------------------------------------------------------*/
+    </script>
+</body>
+
+</html>

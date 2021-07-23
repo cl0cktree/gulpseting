@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- [MYS_AS_07_08_00_P1] 작성자: 누리어 시스템 김은경 -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>투자 상세조회(현물) | 자산 | KB국민은행 마이데이터</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no"><!-- 수정 2021-05-21 (폰에서 전화번호 인식 불가)-->
+    <link href="../../static/common/favicons/favicon_32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon-precomposed">
+    <link href="../../static/common/favicons/favicon_192.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/common/lib/jquery-ui.min.css?cbh=56d2004480ac738dcc9290efa0054b57">
+    <link rel="stylesheet" href="../../static/common/lib/swiper.min.css?cbh=9b2127c7a2f9b16100a24c8278b42cee">
+    <link rel="stylesheet" href="../../static/css/set-nav.css?cbh=297246e49fea0762e55af691c0339cf4"><!-- 수정 : 2021.06.17 -->
+    <link rel="stylesheet" href="../../static/css/ui.css?cbh=9ff300043225a9d341497ec31730179c"><!-- mydata 용 css-->
+</head>
+
+<body>
+    <div class="skip-nav">
+        <a href="#content">본문으로 이동하기</a>
+    </div>
+    <div class="app">
+        <!-- app-header (for MyMoney) //-->
+        <!-- app-header [s] -->
+        <!-- data-type 
+    타이틀이 없을 경우 빈값(<strong class="page-tit"></strong>) - 마크업은 반드시 존재해야함
+    '' : 뒤로가기 + 타이틀 + 전체메뉴
+    'close': 타이틀 + 닫기버튼만
+    'title' : 타이틀만
+    'back' : 타이틀 + back버튼만
+    'notice' : 알림 + 타이틀 + 전체메뉴    
+-->
+        <header class="app-header" data-type="close">
+            <a href="javascript:;" class="btn-notice-box" role="button"><i class="icon-bell2_24">알림함으로 이동</i></a>
+            <a href="javascript:history.back();" class="btn-history-back" role="button"><i class="icon-back">뒤로가기</i></a>
+            <strong class="page-tit">투자 상세조회(현물)</strong>
+            <button type="button" class="btn-allmenu"><i class="icon-menu">전체메뉴</i></button>
+            <a href="javascript:history.back();" class="btn-close" role="button"><span>뒤로가기</span></a>
+        </header>
+        <!-- app-header [e] -->
+        <div class="app-menu">
+            <!-- 수정 : 2021.06.24  // -->
+            <div class="all-menu-top">
+                <div class="util-menu">
+                    <a href="javascript:;" class="" role="button"><i class="icon-setting_24">설정</i></a>
+                    <a href="javascript:;" class="all-menu-notice new" role="button"><i class="icon-bell_24">알림</i></a><!-- 새로운 알림이 있을 때 .new -->
+                    <button type="button" class="btn-close"><span>닫기</span></button>
+                </div>
+                <div class="user-name"><a href="javascript:;"><strong>김국민</strong>님<i class="icon-move"></i></a></div>
+            </div>
+            <ul class="major-menu">
+                <li><a href="javascript:;"><span><i class="icon-mn_asset"></i></span><strong>자산등록</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_report"></i></span><strong>소비리포트</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_notice"></i></span><strong>공지사항</strong></a></li>
+                <li><a href="javascript:;"><span><i class="icon-mn_mydata"></i></span><strong>선물함</strong></a></li>
+            </ul>
+            <!--  // 수정 : 2021.06.24 -->
+            <div class="all-menu-list-wrap">
+                <div class="manage-mydata">
+                    <strong class="tit">마이데이터 관리</strong>
+                    <a href="javascript:;"><span>70</span><i class="icon-move"></i></a>
+                </div>
+                <!-- 수정 : 2021.06.24 메뉴 순서 변경 // -->
+                <ul class="all-menu-list">
+                    <li class="is-active">
+                        <a href="javascript:;">자산</a>
+                        <ul>
+                            <li><a href="javascript:;">자산통합조회</a></li>
+                            <li><a href="javascript:;">입출금&middot;페이</a></li>
+                            <li><a href="javascript:;">예적금</a></li>
+                            <li><a href="javascript:;">투자</a></li>
+                            <li><a href="javascript:;">보험</a></li>
+                            <li><a href="javascript:;">대출&middot;부채</a></li>
+                            <li><a href="javascript:;">부동산</a></li>
+                            <li><a href="javascript:;">자동차</a></li>
+                            <li><a href="javascript:;">My 금고</a></li>
+                            <li><a href="javascript:;">외화</a></li>
+                            <li><a href="javascript:;">적립포인트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지출</a>
+                        <ul>
+                            <li><a href="javascript:;">가계부</a></li>
+                            <li><a href="javascript:;">정기지출</a></li>
+                            <li><a href="javascript:;">카드관리</a></li>
+                            <li><a href="javascript:;">소비리포트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">목표 챌린지</a>
+                        <ul>
+                            <li><a href="javascript:;">아낀만큼</a></li>
+                            <li><a href="javascript:;">쓰는만큼</a></li>
+                            <li><a href="javascript:;">남들만큼</a></li>
+                            <li><a href="javascript:;">저금통</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">제휴/특화</a>
+                        <ul>
+                            <li><a href="javascript:;">신용</a></li>
+                            <li><a href="javascript:;">My Fun Data</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">슬그Money</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">D플랜</a>
+                        <ul>
+                            <li><a href="javascript:;">월수령액</a></li>
+                            <li><a href="javascript:;">라이프이벤트</a></li>
+                            <li><a href="javascript:;">나의기록</a></li>
+                            <li><a href="javascript:;">D플랜 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객센터</a>
+                        <ul>
+                            <li><a href="javascript:;">FAQ</a></li>
+                            <li><a href="javascript:;">전화상담</a></li>
+                            <li><a href="javascript:;">약관 및 정책</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">마이페이지</a>
+                        <ul>
+                            <li><a href="javascript:;">마이데이터 관리</a></li>
+                            <li><a href="javascript:;">내정보</a></li>
+                            <li><a href="javascript:;">마이데이터 선물함</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2021.06.24 메뉴 순서 변경 -->
+            </div>
+        </div>
+
+        <!-- // app-header (for MyMoney) -->
+
+        <!-- app-container //-->
+        <div class="app-container">
+
+            <!-- app-content // -->
+            <main class="app-content my-asset pop-account-detail">
+
+
+                <section class="kb-sec full">
+                    <div class="account-top">
+                        <ul>
+                            <li class="account-wrap">
+                                <div class="icon-con">
+                                    <span><img src="../../static/images/ci/a1aae0000.png" alt="은행별 아이콘"></span><!-- 2021-06-25 공통 수정 -->
+                                </div>
+                                <div class="txt-con">
+                                    <em class="agency">신한은행</em>
+                                    <span class="bank-book">상품명</span>
+                                    <span class="num">1234-5678-1234</span>
+                                    <p class="balance mb0">
+                                        <span>평가금액 <b class="amount"><span class="num">3,000,000</span>원</b></span>
+                                    </p>
+                                </div>
+                                <button type="button" class="btn-hide-account" data-call-layered="mys_as_05_00_01_p1"><i class="icon-more_top_24"></i><span>계좌숨기기</span></button>
+                            </li>
+                            <li class="investment-desc">
+                                <dl class="description-list type2">
+                                    <dt>투자원금</dt>
+                                    <dd class="amount"><em class="num">49,000</em>원</dd>
+                                    <dt>투자수익률</dt><!-- 2021-06-23 수정 -->
+                                    <dd class="amount"><em class="num">2.8</em>%</dd>
+                                    <dt>신규일</dt>
+                                    <dd class="date">2021.10.30</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="account-detail">
+                        <div class="condition-area">
+                            <button class="btn-condition" data-call-layered="mys_as_07_01_02_p1">
+                                <div>
+                                    <div class="sorting-status">
+                                        <span>1개월</span>
+                                        <span>전체</span>
+                                        <span>최신순</span>
+                                    </div>
+                                    <i class="icon-filter_20"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- 2021-07-08 no-data 추가 // -->
+                        <div class="no-data-wrap">
+                            <div class="no-data">
+                                <i class="icon-info_24"></i>
+                                <p>조회내역이 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- // 2021-07-08 no-data 추가 -->
+                        <div class="line-list-wrap type-time-line">
+                            <ul class="d-list">
+                                <li class="lately">
+                                    <div class="line-box">
+                                        <div class="date">2020.10.12 10:10</div>
+                                        <div class="price-wrap">
+                                            <div class="type">입금</div>
+                                            <div class="txt-con">
+                                                <dl class="description-list">
+                                                    <dt>입금금액</dt>
+                                                    <dd class="amount"><b class="num plus">1,210,000</b>원</dd>
+                                                    <dt>잔액</dt>
+                                                    <dd class="total"><span class="num"> 7,700,000</span>원</dd>
+                                                </dl>
+                                                <span class="memo">김국민 / 적요</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="line-box">
+                                        <div class="date">2020.10.12 10:10</div>
+                                        <div class="price-wrap">
+                                            <div class="type">출금</div>
+                                            <div class="txt-con">
+                                                <dl class="description-list">
+                                                    <dt>출금금액</dt>
+                                                    <dd class="amount"><b class="num minus">1,200,000</b>원</dd>
+                                                    <dt>잔액</dt>
+                                                    <dd class="total"><span class="num"> 7,700,000</span>원</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="line-box">
+                                        <div class="date">2020.10.12 10:10</div>
+                                        <div class="price-wrap">
+                                            <div class="type">입금</div>
+                                            <div class="txt-con">
+                                                <dl class="description-list">
+                                                    <dt>입금금액</dt>
+                                                    <dd class="amount"><b class="num plus">1,210,000</b>원</dd>
+                                                    <dt>잔액</dt>
+                                                    <dd class="total"><span class="num"> 7,700,000</span>원</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn-view-more"><span>+ 더보기</span></button>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+            </main>
+            <!-- // app-content -->
+
+        </div>
+        <!-- // app-container -->
+
+        <!-- Layer (fullpage popup, modal, bottom sheet) // -->
+        <div class="layered">
+            <!-- [MYS_AS_05_00_01_P1] 계좌숨김 팝업(공통) (작성자: 누리어 시스템 김은경)// -->
+            <!-- 계좌숨김 팝업(공통)// -->
+            <div class="bottom-sheet full-size my-asset" data-layered-name="mys_as_05_00_01_p1">
+                <div class="bottom-sheet_header">
+                    <span class="tit">숨기기</span><!-- 2021-05-27 수정 // -->
+                    <!--페이//-->
+                    <!--
+        <span class="tit">숨기기</span>
+        -->
+                    <!--//페이-->
+                </div>
+                <div class="bottom-sheet_contents bottom-hide-account">
+                    <section class="kb-sec tab_contents">
+                        <div class="pop-notice">
+                            <!-- 2021-06-22 수정 // -->
+                            <p>
+                                숨기기를 하면 자산목록 및 조회 시<br>선택한 정보가 보이지 않습니다. <br><b>선택한 정보를 숨기시겠습니까?</b>
+                            </p>
+                            <!-- // 2021-06-22 수정 -->
+                        </div>
+                        <div class="account-area">
+                            <div class="icon-con">
+                                <span><img src="../../static/images/ci/a1aae0000.png" alt="은행별 아이콘"></span><!-- 2021-06-25 공통 수정 -->
+                            </div>
+                            <!-- 2021-06-30 수정 // -->
+                            <div class="txt-con">
+                                <em class="tit">기관명</em>
+                                <span class="s-txt">상품명<span class="tag-label t02" data-state="inprogress">직접등록</span></span>
+                                <span class="account num">123-45678-789</span>
+                                <!--페이//-->
+                                <span class="pay-txt">asdfkkk@</span>
+                                <!--//페이-->
+                                <!-- 주식 // -->
+                                <span class="s-txt">삼성전자</span>
+                                <span class="account num">005930</span>
+                                <!-- // 주식 -->
+                                <!-- 카드대금 // -->
+                                <span class="account">월 청구금액 <span class="num">10,000,000</span>원</span>
+                                <!-- // 카드대금 -->
+                                <!-- 적립포인트 // -->
+                                <em class="tit">기관명(카드사)</em>
+                                <span class="s-txt">포인트명</span>
+                                <!-- // 적립포인트 -->
+                            </div>
+                        </div>
+                        <!-- 마이금고 // -->
+                        <div class="account-area">
+                            <div class="icon-con">
+                                <span class="currency"><img src="../../static/images/_temp/icon-flag.png" alt="통화 아이콘"></span>
+                            </div>
+                            <div class="txt-con">
+                                <em class="tit">USD(미국달러)</em>
+                                <span class="account">USD<span class="num">700.00</span></span>
+                            </div>
+                        </div>
+                        <!-- // 마이금고 -->
+                        <!-- // 2021-06-30 수정 -->
+                        <!-- 2021-06-22 앱 경로 // -->
+                        <div class="menu-info">
+                            <span class="tit">*정보 숨기기 해제</span>
+                            <span class="s-txt">전체메뉴 > 설정 > 자산/지출 숨김 설정</span>
+                        </div>
+                        <!-- // 2021-06-22 앱 경로 -->
+                        <!-- 2021-06-22 웹 경로 // -->
+                        <div class="menu-info">
+                            <span class="tit">*정보 숨기기 해제</span>
+                            <span class="s-txt">홈 > 자산 > 자산/지출 숨김 설정</span>
+                        </div>
+                        <!-- // 2021-06-22 웹 경로 -->
+                    </section>
+                </div>
+                <div class="bottom-sheet_buttons">
+                    <button class="btn-solid_sticky" data-action="close"><span>확인</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //계좌숨김 팝업(공통)  -->
+            <!-- [MYS_AS_07_01_02_P1] 조회, 설정 팝업 (작성자: 누리어 시스템 김은경)// -->
+            <!-- 조회, 설정 팝업// -->
+            <div class="bottom-sheet full-size" data-layered-name="mys_as_07_01_02_p1">
+                <div class="bottom-sheet_header">
+                    <span class="tit">조회 조건 선택</span><!-- 2021-06-22 수정 -->
+                </div>
+                <div class="bottom-sheet_contents">
+                    <section class="kb-sec tab_contents">
+                        <div class="is-active">
+                            <div class="kb-form" data-status="error">
+                                <strong class="label">조회기간</strong>
+                                <div class="lookup-period">
+                                    <ul class="btn-segmented_radio">
+                                        <li>
+                                            <input type="radio" name="radioLookupPeriod" id="radioLookupPeriod1" checked="">
+                                            <label for="radioLookupPeriod1">1개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupPeriod" id="radioLookupPeriod2">
+                                            <label for="radioLookupPeriod2">3개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupPeriod" id="radioLookupPeriod3">
+                                            <label for="radioLookupPeriod3">1년</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupPeriod" id="radioLookupPeriod4">
+                                            <label for="radioLookupPeriod4">직접입력</label>
+                                        </li>
+                                    </ul>
+                                    <div class="period-selector">
+                                        <input type="text" title="시작날짜" value="2021.08.28">
+                                        <span>~</span>
+                                        <input type="text" title="종료날짜" value="2021.08.31">
+                                    </div>
+                                    <em class="validation">에러 메세지 영역 입니다.</em>
+                                </div>
+                            </div>
+                            <!--거래유형//-->
+                            <!-- 2021-06-22 주식 // -->
+                            <div class="kb-form">
+                                <strong class="label">거래유형</strong>
+                                <div class="lookup-period">
+                                    <ul class="btn-segmented_radio">
+                                        <li>
+                                            <input type="radio" name="radioLookupType" id="radioLookupType1-1" checked="">
+                                            <label for="radioLookupType1-1">전체</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupType" id="radioLookupType1-2">
+                                            <label for="radioLookupType1-2">매수</label><!-- 2021-06-23 수정 -->
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupType" id="radioLookupType1-3">
+                                            <label for="radioLookupType1-3">매도</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // 2021-06-22 주식 -->
+                            <!-- 2021-06-22 펀드, 신탁, ISA // -->
+                            <div class="kb-form">
+                                <strong class="label">거래유형</strong>
+                                <div class="lookup-period">
+                                    <ul class="btn-segmented_radio">
+                                        <li>
+                                            <input type="radio" name="radioLookupType2" id="radioLookupType2-1" checked="">
+                                            <label for="radioLookupType2-1">전체</label><!-- 2021-07-21 수정 -->
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupType2" id="radioLookupType2-2">
+                                            <label for="radioLookupType2-2">입금</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupType2" id="radioLookupType2-3">
+                                            <label for="radioLookupType2-3">출금</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // 2021-06-22 펀드, 신탁, ISA -->
+                            <!-- 2021-06-22 IPR // -->
+                            <div class="kb-form">
+                                <strong class="label">거래유형</strong>
+                                <div class="lookup-period">
+                                    <ul class="btn-segmented_radio">
+                                        <li>
+                                            <input type="radio" name="radioLookupType3" id="radioLookupType3-1" checked="">
+                                            <label for="radioLookupType3-1">전체</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupType3" id="radioLookupType3-2">
+                                            <label for="radioLookupType3-2">입금</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupType3" id="radioLookupType3-3">
+                                            <label for="radioLookupType3-3">지급</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // 2021-06-22 IPR -->
+
+                            <!--//거래유형-->
+                            <!-- 내역정렬 // -->
+                            <div class="kb-form">
+                                <strong class="label">내역정렬</strong>
+                                <div class="lookup-period">
+                                    <ul class="btn-segmented_radio">
+                                        <li>
+                                            <input type="radio" name="radioLookupSort" id="radioLookupSort1" checked="">
+                                            <label for="radioLookupSort1">최신순</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="radioLookupSort" id="radioLookupSort2">
+                                            <label for="radioLookupSort2">과거순</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // 내역정렬 -->
+                        </div>
+                    </section>
+                </div>
+                <div class="bottom-sheet_buttons">
+                    <button class="btn-solid_sticky lv2" data-action="close"><span>초기화</span></button>
+                    <button class="btn-solid_sticky"><span>확인</span></button>
+                </div>
+                <button class="btn-close" data-action="close"><span>닫기</span></button>
+            </div>
+            <!-- //조회, 설정 팝업  -->
+
+        </div>
+        <!-- // Layer (fullpage popup, modal, bottom sheet) -->
+    </div>
+
+    <!-- Script -->
+    <!-- Common Library -->
+    <script src="../../static/common/lib/jquery-3.4.1.min.js?cbh=220afd743d9e9643852e31a135a9f3ae"></script>
+    <script src="../../static/common/lib/jquery-ui.min.js?cbh=a949d0e524789b2aaa153b5cdb0a5f19"></script>
+    <script src="../../static/common/lib/jquery-ui.touch.js?cbh=700b877cd3ade98ce6cd4be349d81a5c"></script><!-- 수정 2021-05-25 (jquery ui use in mobile)-->
+    <!-- <script src="../../static/common/lib/gsap.min.js?cbh=b97c4220d31f577ef73822a6a2cf6850"></script> -->
+    <script src="../../static/common/lib/current-device.min.js?cbh=bdb1893fac6fc36a4f587b0887eb2ab8"></script>
+    <script src="../../static/common/lib/moment.min.js?cbh=5c158b940513c7dc2ebd901455e9b63d"></script>
+    <script src="../../static/common/lib/swiper-bundle.min.js?cbh=abbba721af4a5e04a624ec1d1bcba3f9"></script>
+    <!-- <script src="../../static/js/bottomSheet.js?cbh=724095e247a9c42d453752f07f786582"></script> -->
+    <script src="../../static/js/modalPopup.js?cbh=0b49f9e7bd4bb39a8f730d1ae8616d90"></script>
+    <script src="../../static/js/menu.js?cbh=bc402afd2fc5ead7cb6ce1c51ebc5147"></script>
+    <script src="../../static/js/navigation.js?cbh=156ee44a35ecbae034cf0a5abe4f92d7"></script><!-- RESET / NAVIGATION -->
+    <!-- Add Library (this page only)-->
+    <script src="../../static/js/ui.js?cbh=f4c579cadc612b3b4db294cb3eaa32e4"></script>
+    <!-- Add Script -->
+
+</body>
+
+</html>
